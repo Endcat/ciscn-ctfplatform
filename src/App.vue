@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <login-box base-width="500" base-height="600"></login-box>
+      <login-box id="login-center" base-width="500" base-height="600"></login-box>
   </div>
 </template>
 
@@ -27,5 +27,8 @@
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to bottom right, rgb(201, 115, 255), rgb(174, 186, 248));
+  }
+  #login-center {
+    margin: 150px auto 0;
   }
 </style>
