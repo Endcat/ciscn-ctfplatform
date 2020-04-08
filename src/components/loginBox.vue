@@ -13,7 +13,7 @@
                     <input type="text" name="team-name"><br>
                     <input type="text" name="team-passwd">
                 </label><br>
-                <input type="submit" value="Submit">
+                <input class="submit-btn" type="submit" value="Submit">
             </form>
         </div>
         <div class="footer"></div>
@@ -61,7 +61,7 @@
         width: 26px;
         height: 26px;
         border-radius: 13px;
-        border: 1px solid rgb(152, 127, 255);
+        border: 1px solid rgb(118, 107, 155);
         margin-left: 10px;
         margin-top: 15px;
     }
@@ -90,8 +90,24 @@
         width: 100%;
         height: 70%;
     }
+    form {
+        position: relative;
+        margin: 0 15% 0 15%;
+    }
     label input {
-        height: 40px;
+        position: relative;
+        margin-top: 10%;
+        height: 70px;
+        border-radius: 35px;
+        width: 100%;
+
+    }
+    .submit-btn {
+        position: relative;
+        margin-top: 10%;
+        height: 70px;
+        border-radius: 35px;
+        width: 100%;
     }
     .footer {
         width: 100%;
