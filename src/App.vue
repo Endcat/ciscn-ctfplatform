@@ -1,14 +1,17 @@
 <template>
   <div id="app">
+      <side-bar></side-bar>
       <login-box id="login-center" base-width="500" base-height="600"></login-box>
   </div>
 </template>
 
 <script>
   import loginBox from "./components/loginBox";
+  import SideBar from "./components/sideBar";
   export default {
     name: 'app',
     components: {
+        SideBar,
       loginBox,
     }
   }

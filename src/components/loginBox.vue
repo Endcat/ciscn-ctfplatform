@@ -134,11 +134,15 @@
     .submit-btn{
         text-indent: 0px;
         transition: all 0.2s linear;
+        border: none;
+        background: linear-gradient(to bottom right, rgb(201, 115, 255), rgb(174, 186, 248));
+    }
+    .submit-btn:active{
+        color: white;
+        background: linear-gradient(to bottom right, rgb(174, 186, 248), rgb(202, 218, 248));
     }
     .submit-btn:hover {
-        background: linear-gradient(to bottom right, rgb(201, 115, 255), rgb(174, 186, 248));
         color: white;
-        border: none;
 
     }
 </style>
