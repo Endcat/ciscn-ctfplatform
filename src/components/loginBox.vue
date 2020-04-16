@@ -7,6 +7,11 @@
                 <li class="green-btn"></li>
             </ul>
         </div>
+        <div class="info-block">
+            <div class="info-title">
+                miniLCTF 2020
+            </div>
+        </div>
         <div class="content">
             <form action="xxx" id="login-form">
                 <label>
@@ -16,7 +21,6 @@
                 <input class="submit-btn" type="submit" value="Submit">
             </form>
         </div>
-        <div class="footer"></div>
     </div>
 </template>
 
@@ -58,6 +62,18 @@
     .nav-bar {
         width: 100%;
         height: 10%;
+    }
+    .info-block {
+        height: 20%;
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        font-family: "Microsoft JhengHei",sans-serif;
+        color: #383838;
+    }
+    .info-title {
+        position: relative;
+        padding-top: 40px;
     }
     .nav-bar ul {
         height: 100%;
@@ -124,9 +140,5 @@
         color: white;
         border: none;
 
-    }
-    .footer {
-        width: 100%;
-        height: 15%;
     }
 </style>
