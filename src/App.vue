@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-      <side-bar></side-bar>
-      <login-box id="login-center" base-width="500" base-height="600"></login-box>
+      <div id="side-view">
+          <side-bar></side-bar>
+      </div>
+      <div id="main-view">
+          <login-box base-width="500" base-height="600"></login-box>
+      </div>
   </div>
 </template>
 
@@ -19,19 +23,28 @@
 
 <style>
   * {
-    padding: 0;
-    margin: 0;
+      position: relative;
+      padding: 0;
+      margin: 0;
   }
   html, body {
     height: 100%;
   }
+  #side-view{
+      display: inline-block;
+      width:10%;
+      height: 100%;
+      float: left;
+  }
+  #main-view{
+      display:inline-block;
+      width:90%;
+      height: 100%;
+      float: right;
+  }
   #app {
-    position: absolute;
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to bottom right, rgb(201, 115, 255), rgb(174, 186, 248));
-  }
-  #login-center {
-    margin: 150px auto 0;
   }
 </style>

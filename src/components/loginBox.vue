@@ -52,12 +52,17 @@
 
 <style scoped>
     .base-container {
+
+        position: relative;
         border-radius: 15px;
         box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         transition: all 0.5s linear;
     }
     .base-container:hover {
-        transform: translate(0,-10px);
+        transform: translate(-50%, -52%);
     }
     .nav-bar {
         width: 100%;
