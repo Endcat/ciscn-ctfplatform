@@ -10,8 +10,8 @@
         <div class="content">
             <form action="xxx" id="login-form">
                 <label>
-                    <input type="text" name="team-name"><br>
-                    <input type="text" name="team-passwd">
+                    <input type="text" v-model="teamName" name="team-name" placeholder="Team Name"><br>
+                    <input type="text" v-model="teamPasswd" name="team-passwd" @keyup="starredPasswd" placeholder="Password">
                 </label><br>
                 <input class="submit-btn" type="submit" value="Submit">
             </form>
@@ -26,6 +26,8 @@
         props: {
             baseWidth: String,
             baseHeight: String,
+            teamName: String,
+            teamPasswd: String,
         },
         data: function () {
             return {
@@ -34,8 +36,14 @@
                     height: this.baseHeight + 'px',
                 }
             }
+        },
+        methods: {
+            starredPasswd() {
+                this.teamPasswd = '*'.repeat(this.teamPasswd.length)
+            }
         }
     }
+
 </script>
 
 <style scoped>
@@ -61,7 +69,7 @@
         width: 26px;
         height: 26px;
         border-radius: 13px;
-        border: 1px solid rgb(118, 107, 155);
+        border: 1px solid rgb(183, 136, 193);
         margin-left: 10px;
         margin-top: 15px;
     }
@@ -94,20 +102,28 @@
         position: relative;
         margin: 0 15% 0 15%;
     }
-    label input {
+    input {
         position: relative;
         margin-top: 10%;
         height: 70px;
         border-radius: 35px;
         width: 100%;
+        outline-style: none;
+        border: 1px solid #ccc;
+        font-size: 24px;
+        font-family: "Microsoft JhengHei",sans-serif;
+        text-indent: 20px;
 
     }
-    .submit-btn {
-        position: relative;
-        margin-top: 10%;
-        height: 70px;
-        border-radius: 35px;
-        width: 100%;
+    .submit-btn{
+        text-indent: 0px;
+        transition: all 0.2s linear;
+    }
+    .submit-btn:hover {
+        background: linear-gradient(to bottom right, rgb(201, 115, 255), rgb(174, 186, 248));
+        color: white;
+        border: none;
+
     }
     .footer {
         width: 100%;
