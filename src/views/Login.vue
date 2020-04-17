@@ -1,5 +1,5 @@
 <template>
-    <login-box base-width="500" base-height="600"></login-box>
+        <login-box base-width="500" base-height="600"></login-box>
 </template>
 
 <script>

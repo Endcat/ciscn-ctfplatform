@@ -28,12 +28,12 @@
         box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
         width: 40%;
         height: 500px;
-        margin-right: 50px;
+        margin-right: 60px;
     }
     #homepage{
         position: relative;
         padding-top: 40px;
-        padding-left: 40px;
+        padding-left: 80px;
     }
     .home-title
     {

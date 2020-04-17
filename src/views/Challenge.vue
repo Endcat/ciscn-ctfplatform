@@ -1,5 +1,7 @@
 <template>
-    
+    <div id="challenge">
+
+    </div>
 </template>
 
 <script>

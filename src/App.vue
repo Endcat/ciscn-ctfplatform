@@ -43,8 +43,21 @@
       width:90%;
       height: 100%;
       float: right;
-      overflow: hidden;
+      overflow: auto;
   }
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #a067ef;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: #b5aafa;
+}
   #app {
     height: 100%;
     width: 100%;

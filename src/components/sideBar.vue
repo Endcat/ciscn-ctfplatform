@@ -14,8 +14,8 @@
             </li>
             <li class="nav-menu">
                 <router-link to="/dashboard">
-                <img class="menu-icon" src="@/assets/icons/comment-alt.png" alt="notice">
-                Notice
+                <img class="menu-icon" src="@/assets/icons/chart-area.png" alt="board">
+                Board
                 </router-link>
             </li>
             <li class="nav-menu">
@@ -52,6 +52,10 @@
         width: 45px;
         margin: 0 auto;
         padding-bottom: 10px;
+        transition: all 0.1s ease-in-out;
+    }
+    .menu-icon:hover{
+        width: 60px;
     }
 #side-bar{
     position: relative;
@@ -62,7 +66,10 @@
     margin: 10% auto;
     box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
     transition: all 0.5s linear;
+    overflow: auto;
+
 }
+
     ul{
         list-style: none;
         position: relative;
