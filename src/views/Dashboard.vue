@@ -2,11 +2,23 @@
     <div id="dashboard">
         <div class="board-title">Dashboard</div>
         <div class="left-board">
-            <div class="team-board"></div>
-            <div class="team-stat"></div>
+            <div class="leader-board">
+                <div class="title team-board-title">
+                    Your Team
+                </div>
+            </div>
+            <div class="team-stat">
+                <div class="title team-stat-title">
+                    Statistics
+                </div>
+            </div>
         </div>
         <div class="right-board">
-            <div class="notice-board"></div>
+            <div class="rank-board">
+                <div class="title notice-board-title">
+                    Notices
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -18,7 +30,17 @@
 </script>
 
 <style scoped>
-    .team-board{
+    .title{
+        position: relative;
+        padding-top: 20px;
+        padding-left: 30px;
+        color: #383838;
+        font-size: 30px;
+        font-family: "Microsoft YaHei", sans-serif;
+        font-weight: normal;
+        letter-spacing: -1px;
+    }
+    .leader-board{
         position: relative;
         display: inline-block;
         border-radius: 15px;
@@ -28,7 +50,7 @@
         margin-bottom: 40px;
         transition: all 0.2s linear;
     }
-    .team-board:hover{
+    .leader-board:hover{
         box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
     }
     .team-stat{
@@ -44,7 +66,7 @@
     .team-stat:hover{
         box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
     }
-    .notice-board{
+    .rank-board{
         position: relative;
         display: inline-block;
         border-radius: 15px;
@@ -53,7 +75,7 @@
         height: 100%;
         transition: all 0.2s linear;
     }
-    .notice-board:hover{
+    .rank-board:hover{
         box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
     }
     #dashboard{
@@ -76,6 +98,7 @@
         height: 750px;
         float: left;
         margin-right: 50px;
+        margin-bottom: 20px;
     }
     .right-board{
         width: 40%;

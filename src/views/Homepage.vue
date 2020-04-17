@@ -33,6 +33,7 @@
         border-radius: 15px;
         box-shadow: 0 10px 30px 0 rgb(107, 66, 217);
         width: 40%;
+        min-width: 500px;
         height: 500px;
         margin-right: 60px;
         float: left;

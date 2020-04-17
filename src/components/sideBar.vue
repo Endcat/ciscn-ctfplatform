@@ -38,7 +38,7 @@
             </li>
             <li class="nav-menu">
                 <router-link to="/admin">
-                    <img class="menu-icon" src="@/assets/icons/cog.png" alt="utils">
+                    <img class="menu-icon" src="@/assets/icons/admin.png" alt="utils">
                     Admin
                 </router-link>
             </li>
@@ -68,12 +68,16 @@
     width: 120px;
     height: 95%;
     max-height: 100%;
-    border-radius: 15px;
+    border-radius: 50px;
     margin: 10% auto;
-    box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
-    transition: all 0.5s linear;
+    box-shadow: 0 10px 20px 0 rgb(107, 66, 217);
+    transition: all 0.2s linear;
     overflow: auto;
+    user-select: none;
 
+}
+#side-bar:hover{
+    box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
 }
 
     ul{
