@@ -67,4 +67,7 @@
   .v-leave-active{
       transition: 0.2s;
   }
+    a {
+        text-decoration: none;
+    }
 </style>

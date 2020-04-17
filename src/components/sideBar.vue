@@ -53,6 +53,7 @@
         border: mediumpurple solid 1px;
         width: 80px;
         transition: all 1s ease-in-out;
+        margin-top: 10px;
     }
     #team-icon:hover{
         transform: rotate(360deg);
@@ -64,6 +65,7 @@
         font-family: "Microsoft YaHei",sans-serif;
         font-weight: lighter;
         letter-spacing: -1px;
+        margin-top: 20px;
 
     }
 </style>

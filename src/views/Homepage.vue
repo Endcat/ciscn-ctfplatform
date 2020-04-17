@@ -26,8 +26,9 @@
         display: inline-block;
         border-radius: 15px;
         box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
-        width: 400px;
+        width: 40%;
         height: 500px;
+        margin-right: 50px;
     }
     #homepage{
         position: relative;
