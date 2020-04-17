@@ -59,7 +59,7 @@
         top:50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        transition: all 0.5s linear;
+        transition: all 0.2s linear;
     }
     .base-container:hover {
         transform: translate(-50%, -52%);

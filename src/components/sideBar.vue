@@ -7,19 +7,19 @@
                 </router-link>
             </li>
             <li class="nav-menu">
-                <router-link to="/homepage">首页</router-link>
+                <router-link to="/homepage">Home</router-link>
             </li>
             <li class="nav-menu">
-                <router-link to="/dashboard">公告</router-link>
+                <router-link to="/dashboard">Notice</router-link>
             </li>
             <li class="nav-menu">
-                <router-link to="/challenge">题目</router-link>
+                <router-link to="/challenge">Challs</router-link>
             </li>
             <li class="nav-menu">
-                <router-link to="/ranking">排名</router-link>
+                <router-link to="/ranking">Rank</router-link>
             </li>
             <li class="nav-menu">
-                <router-link to="/utils">功能</router-link>
+                <router-link to="/utils">Utils</router-link>
             </li>
         </ul>
     </div>
@@ -27,7 +27,7 @@
 
 <script>
     export default {
-        name: "sideBar"
+        name: "sideBar",
     }
 </script>
 
@@ -37,10 +37,8 @@
     width: 120px;
     height: 95%;
     max-height: 100%;
-    background: #d3d3d3;
     border-radius: 15px;
     margin: 10% auto;
-    background: linear-gradient(to bottom right, rgb(201, 115, 255), rgb(174, 186, 248));
     box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
     transition: all 0.5s linear;
 }
@@ -65,7 +63,7 @@
         font-size: 22px;
         font-family: "Microsoft YaHei",sans-serif;
         font-weight: lighter;
-        letter-spacing: 2px;
+        letter-spacing: -1px;
 
     }
 </style>
