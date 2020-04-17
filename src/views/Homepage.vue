@@ -7,16 +7,22 @@
             include computer security professionals, journalists, lawyers, federal government employees, security researchers, students,
             and hackers with a general interest in software, computer architecture, hardware modification, conference badges, and anything else that can be "hacked".
             The event consists of several tracks of speakers about computer- and hacking-related subjects, as well as cyber-security challenges and competitions (known as hacking wargames).
-            Contests held during the event are extremely varied, and can range from creating the longest Wi-Fi connection (aircrack-ng) to finding the most effective way to cool a beer in the Nevada heat.
         </div>
-        <div class="home-bar"></div>
-        <div class="home-bar"></div>
+        <div class="home-bar">
+            <home-info></home-info>
+        </div>
+        <div class="home-bar">
+            <home-sponsor></home-sponsor>
+        </div>
     </div>
 </template>
 
 <script>
+    import HomeInfo from "../components/homeInfo";
+    import HomeSponsor from "../components/homeSponsor";
     export default {
-        name: "Homepage"
+        name: "Homepage",
+        components: {HomeSponsor, HomeInfo}
     }
 </script>
 
@@ -25,10 +31,15 @@
         position: relative;
         display: inline-block;
         border-radius: 15px;
-        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+        box-shadow: 0 10px 30px 0 rgb(107, 66, 217);
         width: 40%;
         height: 500px;
         margin-right: 60px;
+        float: left;
+        transition: all 0.2s linear;
+    }
+    .home-bar:hover{
+        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
     }
     #homepage{
         position: relative;

@@ -1,24 +1,24 @@
 <template>
-    <div id="utils">
-        <div class="utils-title">
-            Utilities
+    <div id="admin">
+        <div class="admin-title">
+            Admin
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "Utils"
+        name: "Admin"
     }
 </script>
 
 <style scoped>
-    #utils{
+    #admin{
         position: relative;
         padding-top: 40px;
         padding-left: 80px;
     }
-    .utils-title
+    .admin-title
     {
         color: #383838;
         font-size: 60px;

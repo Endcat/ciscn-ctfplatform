@@ -1,27 +1,27 @@
 <template>
-    <div id="utils">
-        <div class="utils-title">
-            Utilities
+    <div id="home-sponsor">
+        <div class="sponsor-title">
+            Sponsor
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "Utils"
+        name: "homeSponsor"
     }
 </script>
 
 <style scoped>
-    #utils{
+    #home-sponsor {
         position: relative;
-        padding-top: 40px;
-        padding-left: 80px;
+        padding-top: 20px;
+        padding-left: 40px;
     }
-    .utils-title
+    .sponsor-title
     {
         color: #383838;
-        font-size: 60px;
+        font-size: 40px;
         font-family: "Microsoft YaHei", sans-serif;
         font-weight: lighter;
         letter-spacing: -2px;

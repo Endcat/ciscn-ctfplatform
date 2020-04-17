@@ -6,6 +6,7 @@ import Challenge from "../views/Challenge";
 import Ranking from "../views/Ranking";
 import Utils from "../views/Utils";
 import Login from "../views/Login";
+import Admin from "../views/Admin";
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,7 @@ const routes = [
   { path: '/ranking', component: Ranking},
   { path: '/utils', component: Utils},
   { path: '/login', component: Login},
+  { path: '/admin', component: Admin}
 ]
 
 const router = new VueRouter({

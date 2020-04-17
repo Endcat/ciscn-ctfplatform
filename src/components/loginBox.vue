@@ -9,7 +9,7 @@
         </div>
         <div class="info-block">
             <div class="info-title">
-                miniLCTF 2020
+                Login
             </div>
         </div>
         <div class="content">

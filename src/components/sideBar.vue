@@ -36,6 +36,12 @@
                 Utils
                 </router-link>
             </li>
+            <li class="nav-menu">
+                <router-link to="/admin">
+                    <img class="menu-icon" src="@/assets/icons/cog.png" alt="utils">
+                    Admin
+                </router-link>
+            </li>
         </ul>
     </div>
 </template>
@@ -55,7 +61,7 @@
         transition: all 0.1s ease-in-out;
     }
     .menu-icon:hover{
-        width: 60px;
+        width: 80px;
     }
 #side-bar{
     position: relative;
@@ -89,12 +95,15 @@
         border: white solid 1px;
     }
     .nav-menu{
-        color: white;
+        color: #551a8b;
         font-size: 22px;
         font-family: "Microsoft YaHei",sans-serif;
         font-weight: normal;
         letter-spacing: -1px;
         margin-top: 30px;
 
+    }
+    a:visited{
+        color: #551a8b;
     }
 </style>
