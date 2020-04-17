@@ -2,22 +2,24 @@
     <div id="side-bar">
         <ul>
             <li>
-                <img id="team-icon" src="@/assets/mashirosmall.jpg">
+                <router-link to="/login">
+                    <img id="team-icon" src="@/assets/mashirosmall.jpg" alt="avatar">
+                </router-link>
             </li>
             <li class="nav-menu">
-                首页
+                <router-link to="/homepage">首页</router-link>
             </li>
             <li class="nav-menu">
-                公告
+                <router-link to="/dashboard">公告</router-link>
             </li>
             <li class="nav-menu">
-                题目
+                <router-link to="/challenge">题目</router-link>
             </li>
             <li class="nav-menu">
-                排名
+                <router-link to="/ranking">排名</router-link>
             </li>
             <li class="nav-menu">
-                功能
+                <router-link to="/utils">功能</router-link>
             </li>
         </ul>
     </div>

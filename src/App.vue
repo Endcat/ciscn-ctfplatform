@@ -4,7 +4,7 @@
           <side-bar></side-bar>
       </div>
       <div id="main-view">
-          <login-box base-width="500" base-height="600"></login-box>
+          <router-view></router-view>
       </div>
   </div>
 </template>
