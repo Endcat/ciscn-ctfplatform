@@ -43,6 +43,7 @@
       width:90%;
       height: 100%;
       float: right;
+      overflow: hidden;
   }
   #app {
     height: 100%;

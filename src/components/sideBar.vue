@@ -7,19 +7,34 @@
                 </router-link>
             </li>
             <li class="nav-menu">
-                <router-link to="/homepage">Home</router-link>
+                <router-link to="/homepage">
+                <img class="menu-icon" src="@/assets/icons/home.png" alt="home">
+                Home
+                </router-link>
             </li>
             <li class="nav-menu">
-                <router-link to="/dashboard">Notice</router-link>
+                <router-link to="/dashboard">
+                <img class="menu-icon" src="@/assets/icons/comment-alt.png" alt="notice">
+                Notice
+                </router-link>
             </li>
             <li class="nav-menu">
-                <router-link to="/challenge">Challs</router-link>
+                <router-link to="/challenge">
+                <img class="menu-icon" src="@/assets/icons/flag-checkered.png" alt="challs">
+                Challs
+                </router-link>
             </li>
             <li class="nav-menu">
-                <router-link to="/ranking">Rank</router-link>
+                <router-link to="/ranking">
+                <img class="menu-icon" src="@/assets/icons/crown.png" alt="rank">
+                Rank
+                </router-link>
             </li>
             <li class="nav-menu">
-                <router-link to="/utils">Utils</router-link>
+                <router-link to="/utils">
+                <img class="menu-icon" src="@/assets/icons/cog.png" alt="utils">
+                Utils
+                </router-link>
             </li>
         </ul>
     </div>
@@ -32,6 +47,12 @@
 </script>
 
 <style scoped>
+    .menu-icon{
+        display: block;
+        width: 45px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
 #side-bar{
     position: relative;
     width: 120px;
@@ -54,6 +75,7 @@
         width: 80px;
         transition: all 1s ease-in-out;
         margin-top: 10px;
+        margin-bottom: 30px;
     }
     #team-icon:hover{
         transform: rotate(360deg);
@@ -63,9 +85,9 @@
         color: white;
         font-size: 22px;
         font-family: "Microsoft YaHei",sans-serif;
-        font-weight: lighter;
+        font-weight: normal;
         letter-spacing: -1px;
-        margin-top: 20px;
+        margin-top: 30px;
 
     }
 </style>
