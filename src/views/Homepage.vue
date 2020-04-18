@@ -37,6 +37,7 @@
         margin-right: 60px;
         float: left;
         transition: all 0.2s linear;
+        overflow: scroll;
     }
     .home-bar:hover{
         transform: translate(0, -5px);

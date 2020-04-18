@@ -1,6 +1,6 @@
 <template>
     <div id="admin">
-        <div class="admin-title">
+        <div :style="$store.state.activeScheme.fontColor" class="admin-title">
             Admin
         </div>
     </div>

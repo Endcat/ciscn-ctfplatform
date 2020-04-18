@@ -9,8 +9,8 @@
                     Color Schemes
                 </div>
                 <ul class="color-palette">
-                    <li @click="changeBlack" class="color-circle color-black"></li>
                     <li @click="changeWhite" class="color-circle color-white"></li>
+                    <li @click="changeBlack" class="color-circle color-black"></li>
                     <li @click="changeCyan" class="color-circle color-cyan"></li>
                     <li @click="changePink" class="color-circle color-pink"></li>
                     <li @click="changeYellow" class="color-circle color-yellow"></li>
@@ -20,6 +20,11 @@
             <div :style="$store.state.activeScheme.boxShadow" class="apply-board">
                 <div class="title apply-board-title">
                     NetTop Application
+                </div>
+            </div>
+            <div :style="$store.state.activeScheme.boxShadow" class="issue-board">
+                <div class="title issue-board-title">
+                    Issue
                 </div>
             </div>
         </div>
@@ -181,11 +186,23 @@
         display: inline-block;
         border-radius: 15px;
         width: 100%;
-        height: 150px;
-        margin-bottom: 20px;
+        height: 250px;
+        margin-bottom: 40px;
         transition: all 0.2s linear;
     }
     .apply-board:hover{
+        transform: translate(0, -5px);
+    }
+    .issue-board{
+        position: relative;
+        display: inline-block;
+        border-radius: 15px;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 40px;
+        transition: all 0.2s linear;
+    }
+    .issue-board:hover{
         transform: translate(0, -5px);
     }
     .rank-board{
