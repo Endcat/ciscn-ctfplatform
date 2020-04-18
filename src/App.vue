@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div :style="$store.state.activeScheme.background" id="app">
       <div id="side-view">
           <side-bar></side-bar>
       </div>
@@ -61,7 +61,7 @@
   #app {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom right, rgb(201, 115, 255), rgb(174, 186, 248));
+      transition: all 0.2s ease-in-out;
   }
   .v-enter{
       opacity: 0;

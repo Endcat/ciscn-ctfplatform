@@ -11,6 +11,7 @@ import Admin from "../views/Admin";
 Vue.use(VueRouter)
 
 const routes = [
+  { path: '/', redirect:'homepage'},
   { path: '/homepage', component: Homepage},
   { path: '/dashboard', component: Dashboard},
   { path: '/challenge', component: Challenge},
