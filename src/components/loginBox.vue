@@ -18,7 +18,7 @@
                     <input type="text" v-model="teamName" name="team-name" placeholder="Team Name"><br>
                     <input type="text" v-model="teamPasswd" name="team-passwd" @keyup="starredPasswd" placeholder="Password">
                 </label><br>
-                <input class="submit-btn" type="submit" value="Submit">
+                <input :style="$store.state.activeScheme.boxShadow" class="submit-btn" type="submit" value="Submit">
             </form>
         </div>
     </div>
@@ -136,10 +136,10 @@
 
     }
     .submit-btn{
-        text-indent: 0px;
+        text-indent: 0;
         transition: all 0.2s linear;
         border: none;
-        background: linear-gradient(to bottom right, rgb(201, 115, 255), rgb(174, 186, 248));
+        background: linear-gradient(to bottom right, rgb(63, 186, 80), rgb(119, 180, 124));
     }
     .submit-btn:active{
         color: white;

@@ -7,10 +7,10 @@ export default new Vuex.Store({
   state: {
     activeScheme:{
       background: {
-        'background': 'linear-gradient(to bottom right, rgb(201, 115, 255), rgb(174, 186, 248))',
+        'background': 'linear-gradient(to bottom right, rgb(222, 232, 237), rgb(211, 220, 226))',
       },
       boxShadow: {
-        'box-shadow': '0 10px 30px 0 rgb(107, 66, 217)',
+        'box-shadow': '0 10px 30px 0 rgb(156,175,171)',
         'color': '#383838',
       },
       fontColor: {
@@ -22,7 +22,7 @@ export default new Vuex.Store({
         'background': 'linear-gradient(to bottom right, rgb(201, 115, 255), rgb(174, 186, 248))',
       },
       boxShadow: {
-        'box-shadow': '0 10px 30px 0 rgb(107, 66, 217)',
+        'box-shadow': '0 10px 30px 0 rgb(137, 102, 201)',
         'color': '#383838',
       },
       fontColor: {
@@ -46,7 +46,7 @@ export default new Vuex.Store({
         'background': 'linear-gradient(to bottom right, rgb(168, 204, 253), rgb(188, 226, 252))',
       },
       boxShadow: {
-        'box-shadow': '0 10px 30px 0 rgb(107, 66, 217)',
+        'box-shadow': '0 10px 30px 0 rgb(128, 165, 202)',
         'color': '#383838',
       },
       fontColor: {
@@ -58,7 +58,7 @@ export default new Vuex.Store({
         'background': 'linear-gradient(to bottom right, rgb(255, 209, 253), rgb(250, 208, 201))',
       },
       boxShadow: {
-        'box-shadow': '0 10px 30px 0 rgb(107, 66, 217)',
+        'box-shadow': '0 10px 30px 0 rgb(202, 158, 177)',
         'color': '#383838',
       },
       fontColor: {
@@ -70,7 +70,7 @@ export default new Vuex.Store({
         'background': 'linear-gradient(to bottom right, rgb(222, 232, 237), rgb(211, 220, 226))',
       },
       boxShadow: {
-        'box-shadow': '0 10px 30px 0 rgb(107, 66, 217)',
+        'box-shadow': '0 10px 30px 0 rgb(156,175,171)',
         'color': '#383838',
       },
       fontColor: {
@@ -82,7 +82,7 @@ export default new Vuex.Store({
         'background': 'linear-gradient(to bottom right, rgb(248, 201, 108), rgb(251, 168, 127))',
       },
       boxShadow: {
-        'box-shadow': '0 10px 30px 0 rgb(107, 66, 217)',
+        'box-shadow': '0 10px 30px 0 rgb(199, 134, 67)',
         'color': '#383838',
       },
       fontColor: {
