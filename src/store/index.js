@@ -89,10 +89,33 @@ export default new Vuex.Store({
         'color': '#383838',
       }
     },
+    progressTime: {
+      startDay: 29,
+      startHour: 23,
+      startMin: 57,
+    }
   },
   mutations: {
+    decrementDay(state){
+      state.progressTime.startDay--;
+    },
+    decrementHour(state){
+      state.progressTime.startHour--;
+    },
+    decrementMin(state){
+      state.progressTime.startMin--;
+    },
   },
   actions: {
+    decrementDay(context) {
+      context.commit('decrementDay');
+    },
+    decrementHour(context) {
+      context.commit('decrementHour');
+    },
+    decrementMin(context) {
+      context.commit('decrementMin');
+    },
   },
   modules: {
   }

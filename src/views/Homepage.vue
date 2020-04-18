@@ -22,7 +22,13 @@
     import HomeSponsor from "../components/homeSponsor";
     export default {
         name: "Homepage",
-        components: {HomeSponsor, HomeInfo}
+        components: {HomeSponsor, HomeInfo},
+        mounted() {
+            // setInterval(()=>{
+            //     this.$store.dispatch('decrementDay');
+            // }, 1000)
+            // above succ
+        }
     }
 </script>
 

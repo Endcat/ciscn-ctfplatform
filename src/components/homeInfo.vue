@@ -5,7 +5,7 @@
         </div>
         <div class="set-size charts-container">
             <div class="pie-wrapper progress-day">
-                <span class="label">30<span class="smaller">Day</span></span>
+                <span class="label">{{this.$store.state.progressTime.startDay}}<span class="smaller">Day</span></span>
                 <div class="pie">
                     <div class="left-side half-circle"></div>
                     <div class="right-side half-circle"></div>
@@ -13,7 +13,7 @@
             </div>
 
             <div class="pie-wrapper progress-hour">
-                <span class="label">23<span class="smaller">Hour</span></span>
+                <span class="label">{{this.$store.state.progressTime.startHour}}<span class="smaller">Hour</span></span>
                 <div class="pie">
                     <div class="left-side half-circle"></div>
                     <div class="right-side half-circle"></div>
@@ -21,7 +21,7 @@
             </div>
 
             <div class="pie-wrapper progress-min">
-                <span class="label">57<span class="smaller">Min</span></span>
+                <span class="label">{{this.$store.state.progressTime.startMin}}<span class="smaller">Min</span></span>
                 <div class="pie">
                     <div class="left-side half-circle"></div>
                     <div class="right-side half-circle"></div>
@@ -34,19 +34,11 @@
 <script>
     export default {
         name: "homeInfo",
-        mounted() {
-            displayTime()
-        }
+        methods: {
+        },
     }
+    // setInterval(runProgressTime, 1000)
 
-    function displayTime() {
-        // get element
-        let chartDiv = document.getElementsByClassName("label");
-        let day = chartDiv[0].childNodes[0].data;
-
-        console.log(chartDiv);
-        console.log(day);
-    }
 </script>
 
 <style scoped>
