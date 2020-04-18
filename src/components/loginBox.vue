@@ -1,5 +1,5 @@
 <template>
-    <div class="base-container" :style="baseSize">
+    <div  class="base-container" :style="$store.state.activeScheme.boxShadow">
         <div class="nav-bar">
             <ul>
                 <li class="red-btn"></li>
@@ -52,10 +52,11 @@
 
 <style scoped>
     .base-container {
+        width: 500px;
+        height: 600px;
 
         position: relative;
         border-radius: 15px;
-        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
         top:50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -74,7 +75,6 @@
         text-align: center;
         font-size: 40px;
         font-family: "Microsoft JhengHei",sans-serif;
-        color: #383838;
     }
     .info-title {
         position: relative;
@@ -90,7 +90,6 @@
         width: 26px;
         height: 26px;
         border-radius: 13px;
-        border: 1px solid rgb(183, 136, 193);
         margin-left: 10px;
         margin-top: 15px;
     }

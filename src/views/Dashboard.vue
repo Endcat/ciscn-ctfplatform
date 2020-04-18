@@ -1,20 +1,20 @@
 <template>
     <div id="dashboard">
-        <div class="board-title">Dashboard</div>
+        <div :style="$store.state.activeScheme.fontColor" class="board-title">Dashboard</div>
         <div class="left-board">
-            <div class="leader-board">
+            <div :style="$store.state.activeScheme.boxShadow" class="leader-board">
                 <div class="title team-board-title">
                     Your Team
                 </div>
             </div>
-            <div class="team-stat">
+            <div :style="$store.state.activeScheme.boxShadow" class="team-stat">
                 <div class="title team-stat-title">
                     Statistics
                 </div>
             </div>
         </div>
         <div class="right-board">
-            <div class="rank-board">
+            <div :style="$store.state.activeScheme.boxShadow" class="rank-board">
                 <div class="title notice-board-title">
                     Notices
                 </div>
@@ -34,7 +34,6 @@
         position: relative;
         padding-top: 20px;
         padding-left: 30px;
-        color: #383838;
         font-size: 30px;
         font-family: "Microsoft YaHei", sans-serif;
         font-weight: normal;
@@ -44,39 +43,36 @@
         position: relative;
         display: inline-block;
         border-radius: 15px;
-        box-shadow: 0 10px 30px 0 rgb(107, 66, 217);
         width: 100%;
         height: 400px;
         margin-bottom: 40px;
         transition: all 0.2s linear;
     }
     .leader-board:hover{
-        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+        transform: translate(0, -5px);
     }
     .team-stat{
         position: relative;
         display: inline-block;
         border-radius: 15px;
-        box-shadow: 0 10px 30px 0 rgb(107, 66, 217);
         width: 100%;
         height: 300px;
         margin-bottom: 20px;
         transition: all 0.2s linear;
     }
     .team-stat:hover{
-        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+        transform: translate(0, -5px);
     }
     .rank-board{
         position: relative;
         display: inline-block;
         border-radius: 15px;
-        box-shadow: 0 10px 30px 0 rgb(107, 66, 217);
         width: 100%;
         height: 100%;
         transition: all 0.2s linear;
     }
     .rank-board:hover{
-        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+        transform: translate(0, -5px);
     }
     #dashboard{
         position: relative;
@@ -85,7 +81,6 @@
     }
     .board-title
     {
-        color: #383838;
         font-size: 60px;
         font-family: "Microsoft YaHei", sans-serif;
         font-weight: lighter;

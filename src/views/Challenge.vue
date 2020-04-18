@@ -1,17 +1,17 @@
 <template>
     <div id="challenge">
-        <div class="chall-title">
+        <div :style="$store.state.activeScheme.fontColor" class="chall-title">
             Challenge
         </div>
         <div class="left-board">
-            <div class="leader-board">
+            <div :style="$store.state.activeScheme.boxShadow" class="leader-board">
                 <div class="title filter-board-title">
                     Filter
                 </div>
             </div>
         </div>
         <div class="right-board">
-            <div class="rank-board">
+            <div :style="$store.state.activeScheme.boxShadow" class="rank-board">
                 <div class="title challist-board-title">
                     Capture The Flag!
                 </div>
@@ -35,7 +35,6 @@
     }
     .chall-title
     {
-        color: #383838;
         font-size: 60px;
         font-family: "Microsoft YaHei", sans-serif;
         font-weight: lighter;
@@ -47,7 +46,6 @@
         display: inline-block;
         padding-top: 20px;
         padding-left: 30px;
-        color: #383838;
         font-size: 30px;
         font-family: "Microsoft YaHei", sans-serif;
         font-weight: normal;
@@ -57,26 +55,24 @@
         position: relative;
         display: inline-block;
         border-radius: 15px;
-        box-shadow: 0 10px 30px 0 rgb(107, 66, 217);
         width: 100%;
         height: 400px;
         margin-bottom: 40px;
         transition: all 0.2s linear;
     }
     .leader-board:hover{
-        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+        transform: translate(0, -5px);
     }
     .rank-board{
         position: relative;
         display: inline-block;
         border-radius: 15px;
-        box-shadow: 0 10px 30px 0 rgb(107, 66, 217);
         width: 100%;
         height: 100%;
         transition: all 0.2s linear;
     }
     .rank-board:hover{
-        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+        transform: translate(0, -5px);
     }
     #challenge{
         position: relative;

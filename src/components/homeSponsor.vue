@@ -20,7 +20,6 @@
     }
     .sponsor-title
     {
-        color: #383838;
         font-size: 30px;
         font-family: "Microsoft YaHei", sans-serif;
         font-weight: normal;

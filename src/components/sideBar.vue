@@ -1,5 +1,5 @@
 <template>
-    <div id="side-bar">
+    <div :style="$store.state.activeScheme.boxShadow" id="side-bar">
         <ul>
             <li>
                 <router-link to="/login">
@@ -9,38 +9,38 @@
             <li class="nav-menu">
                 <router-link to="/homepage">
                 <img class="menu-icon" src="@/assets/icons/home.png" alt="home">
-                Home
                 </router-link>
+                Home
             </li>
             <li class="nav-menu">
                 <router-link to="/dashboard">
                 <img class="menu-icon" src="@/assets/icons/chart-area.png" alt="board">
-                Board
                 </router-link>
+                Board
             </li>
             <li class="nav-menu">
                 <router-link to="/challenge">
                 <img class="menu-icon" src="@/assets/icons/flag-checkered.png" alt="challs">
-                Challs
                 </router-link>
+                Challs
             </li>
             <li class="nav-menu">
                 <router-link to="/ranking">
                 <img class="menu-icon" src="@/assets/icons/crown.png" alt="rank">
-                Rank
                 </router-link>
+                Rank
             </li>
             <li class="nav-menu">
                 <router-link to="/utils">
                 <img class="menu-icon" src="@/assets/icons/cog.png" alt="utils">
-                Utils
                 </router-link>
+                Utils
             </li>
             <li class="nav-menu">
                 <router-link to="/admin">
                     <img class="menu-icon" src="@/assets/icons/admin.png" alt="utils">
-                    Admin
                 </router-link>
+                    Admin
             </li>
         </ul>
     </div>
@@ -70,14 +70,13 @@
     max-height: 100%;
     border-radius: 50px;
     margin: 10% auto;
-    box-shadow: 0 10px 20px 0 rgb(107, 66, 217);
     transition: all 0.2s linear;
     overflow: auto;
     user-select: none;
 
 }
 #side-bar:hover{
-    box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+    transform: translate(0, -5px);
 }
 
     ul{
@@ -88,7 +87,6 @@
     }
     #team-icon{
         border-radius: 40px;
-        border: mediumpurple solid 1px;
         width: 80px;
         transition: all 1s ease-in-out;
         margin-top: 10px;
@@ -96,18 +94,13 @@
     }
     #team-icon:hover{
         transform: rotate(360deg);
-        border: white solid 1px;
     }
     .nav-menu{
-        color: #551a8b;
         font-size: 22px;
         font-family: "Microsoft YaHei",sans-serif;
         font-weight: normal;
         letter-spacing: -1px;
         margin-top: 30px;
 
-    }
-    a:visited{
-        color: #551a8b;
     }
 </style>

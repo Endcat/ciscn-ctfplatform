@@ -1,10 +1,10 @@
 <template>
     <div id="utils">
-        <div class="utils-title">
+        <div :style="$store.state.activeScheme.fontColor" class="utils-title">
             Utilities
         </div>
         <div class="left-board">
-            <div class="color-board">
+            <div :style="$store.state.activeScheme.boxShadow" class="color-board">
                 <div class="title color-board-title">
                     Color Schemes
                 </div>
@@ -17,14 +17,14 @@
                     <li @click="changePurple" class="color-circle color-purple"></li>
                 </ul>
             </div>
-            <div class="apply-board">
+            <div :style="$store.state.activeScheme.boxShadow" class="apply-board">
                 <div class="title apply-board-title">
                     NetTop Application
                 </div>
             </div>
         </div>
         <div class="right-board">
-            <div class="rank-board">
+            <div :style="$store.state.activeScheme.boxShadow" class="rank-board">
                 <div class="title notice-board-title">
                     Notices
                 </div>
@@ -39,21 +39,34 @@
         methods:{
             changeBlack(){
                 this.$store.state.activeScheme.background = this.$store.state.blackScheme.background;
+                this.$store.state.activeScheme.boxShadow = this.$store.state.blackScheme.boxShadow;
+                this.$store.state.activeScheme.fontColor = this.$store.state.blackScheme.fontColor;
             },
             changeWhite(){
                 this.$store.state.activeScheme.background = this.$store.state.whiteScheme.background;
+                this.$store.state.activeScheme.boxShadow = this.$store.state.whiteScheme.boxShadow;
+                this.$store.state.activeScheme.fontColor = this.$store.state.whiteScheme.fontColor;
             },
             changePurple(){
                 this.$store.state.activeScheme.background = this.$store.state.purpleScheme.background;
+                this.$store.state.activeScheme.boxShadow = this.$store.state.purpleScheme.boxShadow;
+                this.$store.state.activeScheme.fontColor = this.$store.state.purpleScheme.fontColor;
             },
             changeCyan(){
                 this.$store.state.activeScheme.background = this.$store.state.cyanScheme.background;
+                this.$store.state.activeScheme.boxShadow = this.$store.state.cyanScheme.boxShadow;
+                this.$store.state.activeScheme.fontColor = this.$store.state.cyanScheme.fontColor;
             },
             changePink(){
                 this.$store.state.activeScheme.background = this.$store.state.pinkScheme.background;
+                this.$store.state.activeScheme.boxShadow = this.$store.state.pinkScheme.boxShadow;
+                this.$store.state.activeScheme.fontColor = this.$store.state.pinkScheme.fontColor;
             },
             changeYellow(){
                 this.$store.state.activeScheme.background = this.$store.state.yellowScheme.background;
+                this.$store.state.activeScheme.boxShadow = this.$store.state.yellowScheme.boxShadow;
+                this.$store.state.activeScheme.boxShadow = this.$store.state.yellowScheme.boxShadow;
+                this.$store.state.activeScheme.fontColor = this.$store.state.yellowScheme.fontColor;
             },
         }
     }
@@ -92,8 +105,23 @@
         list-style: none;
         transition: all 0.1s ease-in-out;
     }
-    .color-circle:hover{
-        box-shadow: 0 10px 40px 0 rgb(107, 66, 217);
+    .color-black:hover{
+        box-shadow: 0 10px 40px 0 rgb(24, 29, 32);
+    }
+    .color-purple:hover{
+        box-shadow: 0 10px 40px 0 rgb(191, 149, 255);
+    }
+    .color-pink:hover{
+        box-shadow: 0 10px 40px 0 rgb(253, 209, 227);
+    }
+    .color-cyan:hover{
+        box-shadow: 0 10px 40px 0 rgb(176, 213, 253);
+    }
+    .color-yellow:hover{
+        box-shadow: 0 10px 40px 0 rgb(250, 183, 118);
+    }
+    .color-white:hover{
+        box-shadow: 0 10px 40px 0 rgb(217, 226, 232);
     }
     .color-board-title{
         position: relative;
@@ -107,7 +135,6 @@
     }
     .utils-title
     {
-        color: #383838;
         font-size: 60px;
         font-family: "Microsoft YaHei", sans-serif;
         font-weight: lighter;
@@ -132,7 +159,6 @@
         position: relative;
         padding-top: 20px;
         padding-left: 30px;
-        color: #383838;
         font-size: 30px;
         font-family: "Microsoft YaHei", sans-serif;
         font-weight: normal;
@@ -142,38 +168,35 @@
         position: relative;
         display: inline-block;
         border-radius: 15px;
-        box-shadow: 0 10px 30px 0 rgb(107, 66, 217);
         width: 100%;
         height: 80px;
         margin-bottom: 40px;
         transition: all 0.2s linear;
     }
     .color-board:hover{
-        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+        transform: translate(0, -5px);
     }
     .apply-board{
         position: relative;
         display: inline-block;
         border-radius: 15px;
-        box-shadow: 0 10px 30px 0 rgb(107, 66, 217);
         width: 100%;
         height: 150px;
         margin-bottom: 20px;
         transition: all 0.2s linear;
     }
     .apply-board:hover{
-        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+        transform: translate(0, -5px);
     }
     .rank-board{
         position: relative;
         display: inline-block;
         border-radius: 15px;
-        box-shadow: 0 10px 30px 0 rgb(107, 66, 217);
         width: 100%;
         height: 100%;
         transition: all 0.2s linear;
     }
     .rank-board:hover{
-        box-shadow: 0 10px 50px 0 rgb(107, 66, 217);
+        transform: translate(0, -5px);
     }
 </style>
