@@ -44,10 +44,17 @@
                 let currentDay = document.getElementsByClassName("label")[0].childNodes[0].data;
                 let currentMinRatio = currentMin / 60;
                 let currentHourRatio = currentHour / 24;
-                let currentDayRatio = currentDay / 60;
+                let currentDayRatio = currentDay / 7;
+                let chartLeftList = document.getElementsByClassName("left-side");
+                // console.log(chartList);
+                let minLeftChart = chartLeftList[2];
+                let hourLeftChart = chartLeftList[1];
+                let dayLeftChart = chartLeftList[0];
+                minLeftChart.style.transform = 'rotate('+360*currentMinRatio+'deg)';
+                hourLeftChart.style.transform = 'rotate('+360*currentHourRatio+'deg)';
+                dayLeftChart.style.transform = 'rotate('+140*currentDayRatio+'deg)';
 
-
-            },1000)
+            },500)
         },
     }
 
@@ -149,7 +156,7 @@
         border-color: #3498db;
     }
     .pie-wrapper.progress-day .pie .left-side {
-        transform: rotate(153deg);
+        transform: rotate(140deg);
     }
     .pie-wrapper.progress-day .pie .right-side {
         display: none;
@@ -161,10 +168,10 @@
         border-color: #9b59b6;
     }
     .pie-wrapper.progress-hour .pie .left-side {
-        transform: rotate(216deg);
+        transform: rotate(180deg);
     }
     .pie-wrapper.progress-hour .pie .right-side {
-        transform: rotate(180deg);
+        display: none;
     }
     .pie-wrapper.progress-min .pie {
         clip: rect(auto, auto, auto, auto);
@@ -173,10 +180,10 @@
         border-color: #e67e22;
     }
     .pie-wrapper.progress-min .pie .left-side {
-        transform: rotate(300deg);
+        transform: rotate(180deg);
     }
     .pie-wrapper.progress-min .pie .right-side {
-        transform: rotate(180deg);
+        display: none;
     }
     #home-info {
     position: relative;
