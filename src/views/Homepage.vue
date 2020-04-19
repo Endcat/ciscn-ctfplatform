@@ -24,10 +24,21 @@
         name: "Homepage",
         components: {HomeSponsor, HomeInfo},
         mounted() {
-            // setInterval(()=>{
-            //     this.$store.dispatch('decrementDay');
-            // }, 1000)
-            // above succ
+            setInterval(()=>{
+                if (this.$store.state.progressTime.startMin !== 0 ){
+                    this.$store.dispatch('decrementMin');
+                }
+                else if (this.$store.state.progressTime.startHour !== 0){
+                    this.$store.dispatch('decrementHour');
+                    this.$store.dispatch('resetMin')
+                } else if (this.$store.state.progressTime.startDay !== 0) {
+                    this.$store.dispatch('decrementDay');
+                    this.$store.dispatch('resetHour');
+                    this.$store.dispatch('resetMin');
+                } else {
+                    console.log("Game end!")
+                }
+            }, 1000)
         }
     }
 </script>

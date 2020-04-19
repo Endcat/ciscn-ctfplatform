@@ -105,6 +105,12 @@ export default new Vuex.Store({
     decrementMin(state){
       state.progressTime.startMin--;
     },
+    resetHour(state){
+      state.progressTime.startHour = 23;
+    },
+    resetMin(state){
+      state.progressTime.startMin = 59;
+    },
   },
   actions: {
     decrementDay(context) {
@@ -115,6 +121,12 @@ export default new Vuex.Store({
     },
     decrementMin(context) {
       context.commit('decrementMin');
+    },
+    resetHour(context) {
+      context.commit('resetHour');
+    },
+    resetMin(context) {
+      context.commit('resetMin');
     },
   },
   modules: {
