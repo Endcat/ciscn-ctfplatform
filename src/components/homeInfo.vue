@@ -37,8 +37,13 @@
         methods: {
 
         },
+        data() {
+            return {
+                circleTimer: null,
+            }
+        },
         mounted() {
-            setInterval(()=>{
+            this.circleTimer = setInterval(()=>{
                 let currentMin = document.getElementsByClassName("label")[2].childNodes[0].data;
                 let currentHour = document.getElementsByClassName("label")[1].childNodes[0].data;
                 let currentDay = document.getElementsByClassName("label")[0].childNodes[0].data;
@@ -56,6 +61,10 @@
 
             },500)
         },
+        beforeDestroy() {
+            clearInterval(this.circleTimer);
+            this.circleTimer = null;
+        }
     }
 
 </script>

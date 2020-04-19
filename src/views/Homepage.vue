@@ -23,8 +23,13 @@
     export default {
         name: "Homepage",
         components: {HomeSponsor, HomeInfo},
+        data (){
+            return {
+                circleTimer: null,
+            }
+        },
         mounted() {
-            setInterval(()=>{
+            this.circleTimer = setInterval(()=>{
                 if (this.$store.state.progressTime.startMin !== 0 ){
                     this.$store.dispatch('decrementMin');
                 }
@@ -39,6 +44,10 @@
                     console.log("Game end!")
                 }
             }, 500)
+        },
+        beforeDestroy() {
+            clearInterval(this.circleTimer);
+            this.circleTimer = null;
         },
         props: {
             baseMin: 60,
