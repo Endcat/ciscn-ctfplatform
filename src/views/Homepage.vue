@@ -38,8 +38,16 @@
                 } else {
                     console.log("Game end!")
                 }
-            }, 1000)
+            }, 500)
+        },
+        props: {
+            baseMin: 60,
+            baseHour: 24,
+            baseDay: 7, //todo axios get baseday
+        },
+        methods: {
         }
+
     }
 </script>
 

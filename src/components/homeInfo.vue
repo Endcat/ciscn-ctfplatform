@@ -35,9 +35,21 @@
     export default {
         name: "homeInfo",
         methods: {
+
+        },
+        mounted() {
+            setInterval(()=>{
+                let currentMin = document.getElementsByClassName("label")[2].childNodes[0].data;
+                let currentHour = document.getElementsByClassName("label")[1].childNodes[0].data;
+                let currentDay = document.getElementsByClassName("label")[0].childNodes[0].data;
+                let currentMinRatio = currentMin / 60;
+                let currentHourRatio = currentHour / 24;
+                let currentDayRatio = currentDay / 60;
+
+
+            },1000)
         },
     }
-    // setInterval(runProgressTime, 1000)
 
 </script>
 
