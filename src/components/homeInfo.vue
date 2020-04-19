@@ -28,6 +28,8 @@
                 </div>
             </div>
         </div>
+        <div class="schedule-info">
+        </div>
     </div>
 </template>
 
