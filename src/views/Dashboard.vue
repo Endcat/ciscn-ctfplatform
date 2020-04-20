@@ -9,8 +9,9 @@
             </div>
             <div :style="$store.state.activeScheme.boxShadow" class="team-stat">
                 <div class="title team-stat-title">
-                    Statistics
+                    Progress
                 </div>
+                <chall-stat></chall-stat>
             </div>
         </div>
         <div class="right-board">
@@ -24,8 +25,10 @@
 </template>
 
 <script>
+    import ChallStat from "../components/challStat";
     export default {
-        name: "Dashboard"
+        name: "Dashboard",
+        components: {ChallStat}
     }
 </script>
 
@@ -56,7 +59,7 @@
         display: inline-block;
         border-radius: 15px;
         width: 100%;
-        height: 300px;
+        height: 320px;
         margin-bottom: 20px;
         transition: all 0.2s linear;
     }
