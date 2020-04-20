@@ -29,6 +29,9 @@
 </script>
 
 <style scoped>
+    .sponsor-wrapper{
+        margin-left: 40px;
+    }
     #home-sponsor {
         position: relative;
         padding-top: 20px;

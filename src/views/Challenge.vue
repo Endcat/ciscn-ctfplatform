@@ -8,6 +8,7 @@
                 <div class="title filter-board-title">
                     Filter
                 </div>
+                <chall-filter></chall-filter>
             </div>
         </div>
         <div class="right-board">
@@ -23,9 +24,10 @@
 
 <script>
     import ChallList from "../components/challList";
+    import ChallFilter from "../components/challFilter";
     export default {
         name: "Challenge",
-        components: {ChallList}
+        components: {ChallFilter, ChallList}
     }
 </script>
 

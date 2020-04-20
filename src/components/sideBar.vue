@@ -14,7 +14,7 @@
             </li>
             <li class="nav-menu">
                 <router-link to="/dashboard">
-                <img class="menu-icon" src="@/assets/icons/chart-area.png" alt="board">
+                    <img class="menu-icon" src="@/assets/icons/chart-area.png" alt="board">
                 </router-link>
                 Board
             </li>
