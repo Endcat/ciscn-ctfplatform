@@ -15,15 +15,17 @@
                 <div class="title challist-board-title">
                     Capture The Flag!
                 </div>
-                <!--todo ul list here-->
+                <chall-list></chall-list>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import ChallList from "../components/challList";
     export default {
-        name: "Challenge"
+        name: "Challenge",
+        components: {ChallList}
     }
 </script>
 
@@ -70,6 +72,7 @@
         width: 100%;
         height: 100%;
         transition: all 0.2s linear;
+        overflow: scroll;
     }
     .rank-board:hover{
         transform: translate(0, -5px);
