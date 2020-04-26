@@ -6,6 +6,8 @@
                 <div class="title team-board-title">
                     Your Team
                 </div>
+<!--                TO DO Team display layout-->
+                <team-board></team-board>
             </div>
             <div :style="$store.state.activeScheme.boxShadow" class="team-stat">
                 <div class="title team-stat-title">
@@ -26,9 +28,10 @@
 
 <script>
     import ChallStat from "../components/challStat";
+    import TeamBoard from "../components/teamBoard";
     export default {
         name: "Dashboard",
-        components: {ChallStat}
+        components: {TeamBoard, ChallStat}
     }
 </script>
 
