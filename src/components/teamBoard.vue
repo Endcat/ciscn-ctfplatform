@@ -2,6 +2,7 @@
     <div id="team-board">
 <!--        team-board wrapper-->
         <div class="team-board-block" id="team-board-left">
+<!--这里放队伍的强势方向/离前一名的分数差值-->
 
         </div>
         <div class="team-board-block" id="team-board-middle">
@@ -12,10 +13,13 @@
                 <li id="team-id">
                     EndCat
                 </li>
+                <li id="team-rank">
+                    1st
+                </li>
             </ul>
         </div>
         <div class="team-board-block" id="team-board-right">
-
+<!--TODO-->
         </div>
     </div>
 </template>
@@ -28,12 +32,16 @@
 
 <style scoped>
     #team-id{
-        
+        font-size: 25px;
+    }
+    #team-rank{
+        margin-top: 10px;
+        font-size: 20px;
     }
     .team-info-wrapper{
         text-align: center;
         list-style: none;
-        margin-top: 40px;
+        margin-top: 60px;
 
     }
     .team-info-wrapper li{
@@ -57,7 +65,7 @@
         margin-left: 15px;
         width: 30%;
         height: 100%;
-        background: #9b59b6;
+        background: #cdacde;
     }
 
     #team-board{
