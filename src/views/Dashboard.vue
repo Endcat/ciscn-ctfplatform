@@ -20,7 +20,12 @@
             <div :style="$store.state.activeScheme.boxShadow" class="rank-board">
                 <div class="title notice-board-title">
                     Notices
-                    <notice-block></notice-block>
+                    <notice-block notice-content="Hint updated on Challenge 1" notice-title="Hint"></notice-block>
+                    <notice-block notice-content="Hint updated on Challenge 2" notice-title="Hint"></notice-block>
+                    <notice-block notice-content="Hint updated on Challenge 3" notice-title="Hint"></notice-block>
+                    <notice-block notice-content="Hint updated on Challenge 4" notice-title="Hint"></notice-block>
+                    <notice-block notice-content="Hint updated on Challenge 5" notice-title="Hint"></notice-block>
+                    <notice-block notice-content="Hint updated on Challenge 6" notice-title="Hint"></notice-block>
                 </div>
             </div>
         </div>
