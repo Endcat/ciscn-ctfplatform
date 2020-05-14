@@ -1,8 +1,8 @@
 <template>
     <div id="homepage">
-        <div :style="$store.state.activeScheme.fontColor" class="home-title">Welcome to miniLCTF 2020 !</div>
+        <div :style="$store.state.activeScheme.fontColor" class="home-title">Welcome to CTFa Platform !</div>
         <div :style="$store.state.activeScheme.fontColor" class="home-subtitle">
-            miniLCTF (also written as miniLCTF, miniLCTF or miniLCTF) is one of the world's largest and most notable hacker conventions,
+            CTFa (also written as CTFa, CTFa or CTFa) is one of the world's largest and most notable hacker conventions,
             held annually in Las Vegas, Nevada. The first miniLCTF took place in June 1993 and today many attendees at miniLCTF
             include computer security professionals, journalists, lawyers, federal government employees, security researchers, students,
             and hackers with a general interest in software, computer architecture, hardware modification, conference badges, and anything else that can be "hacked".

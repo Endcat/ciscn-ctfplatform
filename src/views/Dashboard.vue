@@ -20,6 +20,7 @@
             <div :style="$store.state.activeScheme.boxShadow" class="rank-board">
                 <div class="title notice-board-title">
                     Notices
+                    <notice-block></notice-block>
                 </div>
             </div>
         </div>
@@ -29,9 +30,10 @@
 <script>
     import ChallStat from "../components/challStat";
     import TeamBoard from "../components/teamBoard";
+    import NoticeBlock from "../components/noticeBlock";
     export default {
         name: "Dashboard",
-        components: {TeamBoard, ChallStat}
+        components: {NoticeBlock, TeamBoard, ChallStat}
     }
 </script>
 

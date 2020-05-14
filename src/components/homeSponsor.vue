@@ -54,7 +54,9 @@
         width: 40%
     }
     .sponsor-item img {
-        width: 200px;
+        max-width: 200px;
+        min-width: 100px;
+        width: 100%;
         transition: all 0.2s ease-in-out;
     }
     .sponsor-item img:hover{
