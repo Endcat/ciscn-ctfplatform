@@ -6,7 +6,46 @@
         <div class="left-board">
             <div :style="$store.state.activeScheme.boxShadow" class="leader-board">
                 <div class="title leader-board-title">
-                    Top 5
+                    Top 3
+                    <div class="top-team-board" :style="$store.state.activeScheme.boxShadow">
+                        <div class="top-team-board-left">
+                            <img src="@/assets/icons/gold.png" width="70px" alt="top1">
+                        </div>
+                        <div class="top-team-board-right">
+                            <div class="team-name">
+
+                            </div>
+                            <div class="team-score">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-team-board" :style="$store.state.activeScheme.boxShadow">
+                        <div class="top-team-board-left">
+                            <img src="@/assets/icons/silver.png" width="70px" alt="top2">
+                        </div>
+                        <div class="top-team-board-right">
+                            <div class="team-name">
+
+                            </div>
+                            <div class="team-score">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-team-board" :style="$store.state.activeScheme.boxShadow">
+                        <div class="top-team-board-left">
+                            <img src="@/assets/icons/bronze.png" width="70px" alt="top3">
+                        </div>
+                        <div class="top-team-board-right">
+                            <div class="team-name">
+
+                            </div>
+                            <div class="team-score">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -23,7 +62,8 @@
 
 <script>
     export default {
-        name: "Ranking"
+        name: "Ranking",
+        components: {}
     }
 </script>
 
@@ -57,6 +97,14 @@
         border-radius: 15px;
         width: 100%;
         height: 600px;
+        margin-bottom: 40px;
+        transition: all 0.2s linear;
+    }
+    .top-team-board{
+        position: relative;
+        display: inline-block;
+        border-radius: 15px;
+        width: 95%;
         margin-bottom: 40px;
         transition: all 0.2s linear;
     }
