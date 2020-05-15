@@ -1,8 +1,9 @@
-# ciscn-ctfplatform
-
-宇宙第一难看的CTF平台前端
-
-不服来辩
+<p align="center"><img src="https://github.com/Endcat/ciscn-ctfplatform/blob/master/static/CTFa_icon.png" width="200" alt="fiber-icon"></p>
+<h1 align="center">CTFa - Next-generation CTF Platform</h1>
+<p align="center">
+  Frontend Dependency<br/>
+<img src="https://img.shields.io/badge/-Vue.js-darkgreen?style=for-the-badge&logo=vue.js">
+</p>
 
 ## Usage
 ```
