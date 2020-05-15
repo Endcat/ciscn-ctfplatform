@@ -13,10 +13,10 @@
                         </div>
                         <div class="top-team-board-right">
                             <div class="team-name">
-
+                                f1sh
                             </div>
                             <div class="team-score">
-
+                                1234567Pt
                             </div>
                         </div>
                     </div>
@@ -26,10 +26,10 @@
                         </div>
                         <div class="top-team-board-right">
                             <div class="team-name">
-
+                                w1nd
                             </div>
                             <div class="team-score">
-
+                                123456Pt
                             </div>
                         </div>
                     </div>
@@ -39,10 +39,10 @@
                         </div>
                         <div class="top-team-board-right">
                             <div class="team-name">
-
+                                Frank
                             </div>
                             <div class="team-score">
-
+                                114515Pt
                             </div>
                         </div>
                     </div>
@@ -54,16 +54,21 @@
                 <div class="title rank-board-title">
                     Rank List
                 </div>
-                <!--todo ul list here-->
+                <ul class="rank-list-wrapper">
+                    <li>
+                        <rank-bar></rank-bar>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import RankBar from "../components/rankBar";
     export default {
         name: "Ranking",
-        components: {}
+        components: {RankBar}
     }
 </script>
 
@@ -105,7 +110,8 @@
         display: inline-block;
         border-radius: 15px;
         width: 95%;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        margin-top: 20px;
         transition: all 0.2s linear;
     }
     .leader-board:hover{
@@ -134,5 +140,29 @@
         min-width: 500px;
         height: 750px;
         float: left;
+    }
+    .top-team-board-left {
+        position: relative;
+        float: left;
+    }
+    .top-team-board-left img {
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+    .top-team-board-right{
+        float: left;
+    }
+    .team-name {
+        float: top;
+        text-indent: 20px;
+        padding-top: 10px;
+    }
+    .team-score {
+        float: bottom;
+        text-indent: 20px;
+        padding-bottom: 10px;
+    }
+    .rank-list-wrapper {
+        list-style: none;
     }
 </style>
