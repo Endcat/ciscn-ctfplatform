@@ -19,9 +19,9 @@ Vue.js
 | Router | Functions | Progress |
 |---|---|---|
 | /login | login team | done |
-| /homepage  | intro, schedule (remaining time) & sponsor list  | developing  |
-| /dashboard  | team info, notice post & statistics  | developing  |
-| /challenge  | challenge list with filter function (secondary router)  | developing  |
-| /ranking  | ranking list (show top 5)  | developing  |
+| /homepage  | intro, schedule (remaining time) & sponsor list  | done |
+| /dashboard  | team info, notice post & statistics  | done |
+| /challenge  | challenge list with filter function (secondary router)  | done |
+| /ranking  | ranking list (show top 5)  | done |
 | /utils  | settings of platform & nettop application  | developing  |
 | /admin  | dashboard for admin, including server monitoring, platform management, etc.  | developing  |

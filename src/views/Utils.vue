@@ -21,6 +21,7 @@
                 <div class="title apply-board-title">
                     NetTop Application
                 </div>
+                
             </div>
             <div :style="$store.state.activeScheme.boxShadow" class="issue-board">
                 <div class="title issue-board-title">

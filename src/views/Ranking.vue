@@ -187,6 +187,7 @@
         float: bottom;
         text-indent: 20px;
         padding-bottom: 10px;
+        font-size: 30px;
     }
     .rank-list-wrapper {
         width: 100%;
