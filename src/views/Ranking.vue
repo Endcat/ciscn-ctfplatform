@@ -54,21 +54,47 @@
                 <div class="title rank-board-title">
                     Rank List
                 </div>
-                <ul class="rank-list-wrapper">
-                    <li>
-                        <rank-bar></rank-bar>
-                    </li>
-                </ul>
+                <table class="rank-list-wrapper">
+                    <tr>
+                        <th>Place</th>
+                        <th>Team</th>
+                        <th>Score</th>
+                        <th>Solved</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>f1sh</td>
+                        <td>1234567Pt</td>
+                        <td>1234</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>w1nd</td>
+                        <td>123456Pt</td>
+                        <td>321</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Frank</td>
+                        <td>114515Pt</td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>EndCat</td>
+                        <td>114514Pt</td>
+                        <td>71</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import RankBar from "../components/rankBar";
     export default {
         name: "Ranking",
-        components: {RankBar}
+        components: {}
     }
 </script>
 
@@ -101,7 +127,7 @@
         display: inline-block;
         border-radius: 15px;
         width: 100%;
-        height: 600px;
+        height: 550px;
         margin-bottom: 40px;
         transition: all 0.2s linear;
     }
@@ -163,6 +189,10 @@
         padding-bottom: 10px;
     }
     .rank-list-wrapper {
-        list-style: none;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .rank-list-wrapper tr td {
+        text-align: center;
     }
 </style>
