@@ -20,6 +20,18 @@
             <div :style="$store.state.activeScheme.boxShadow" class="apply-board">
                 <div class="title apply-board-title">
                     NetTop Application
+
+                </div>
+                <div id="apply-left">
+                    <div :style="$store.state.activeScheme.boxShadow" class="request-btn nettop-btn" >Request</div>
+                    <div :style="$store.state.activeScheme.boxShadow" class="cancel-btn nettop-btn" >Cancel</div>
+                </div>
+                <div id="apply-mid">
+                    <img src="@/assets/icons/laptop.png" id="nettop-img" alt="nettop-img">
+                </div>
+                <div id="apply-right">
+                    <div :style="$store.state.activeScheme.boxShadow" class="request-btn nettop-btn" >Request</div>
+                    <div :style="$store.state.activeScheme.boxShadow" class="cancel-btn nettop-btn" >Cancel</div>
                 </div>
                 
             </div>
@@ -33,6 +45,12 @@
             <div :style="$store.state.activeScheme.boxShadow" class="rank-board">
                 <div class="title notice-board-title">
                     Notices
+                    <notice-block notice-content="My name is Notice 1" notice-title="Notice"></notice-block>
+                    <notice-block notice-content="My name is Notice 2" notice-title="Notice"></notice-block>
+                    <notice-block notice-content="My name is Notice 3" notice-title="Notice"></notice-block>
+                    <notice-block notice-content="My name is Notice 4" notice-title="Notice"></notice-block>
+                    <notice-block notice-content="My name is Notice 5" notice-title="Notice"></notice-block>
+                    <notice-block notice-content="My name is Notice 6" notice-title="Notice"></notice-block>
                 </div>
             </div>
         </div>
@@ -40,8 +58,10 @@
 </template>
 
 <script>
+    import NoticeBlock from "../components/noticeBlock";
     export default {
         name: "Utils",
+        components: {NoticeBlock},
         methods:{
             changeBlack(){
                 this.$store.state.activeScheme.background = this.$store.state.blackScheme.background;
@@ -216,5 +236,75 @@
     }
     .rank-board:hover{
         transform: translate(0, -5px);
+    }
+    .request-btn{
+        position: relative;
+        width: 150px;
+        height: 50px;
+        font-size: 25px;
+        line-height: 50px;
+        border-radius: 50px;
+        text-align: center;
+        text-indent: 0;
+        transition: all 0.2s linear;
+        border: none;
+        background: linear-gradient(to bottom right, rgb(63, 186, 80), rgb(119, 180, 124));
+    }
+    .request-btn:active{
+        color: white;
+        background: linear-gradient(to bottom right, rgb(174, 186, 248), rgb(202, 218, 248));
+    }
+    .request-btn:hover {
+        color: white;
+
+    }
+    .cancel-btn{
+        position: relative;
+        width: 150px;
+        height: 50px;
+        font-size: 25px;
+        line-height: 50px;
+        border-radius: 50px;
+        text-align: center;
+        text-indent: 0;
+        transition: all 0.2s linear;
+        border: none;
+        background: linear-gradient(to bottom right, rgb(225, 0, 0), rgb(255, 30, 30));
+    }
+    .cancel-btn:active{
+        color: white;
+        background: linear-gradient(to bottom right, rgb(174, 186, 248), rgb(202, 218, 248));
+    }
+    .cancel-btn:hover {
+        color: white;
+
+    }
+    .nettop-btn{
+        display: block;
+        position: relative;
+        margin-top: 20px;
+    }
+    #nettop-img{
+        width: 150px;
+        position: relative;
+    }
+    #apply-left{
+        width: 30%;
+        display: inline-block;
+        position: relative;
+        background: #9b59b6;
+    }
+    #apply-mid{
+        display: inline-block;
+        position: relative;
+        background: #7f8c8d;
+    }
+    #apply-right{
+        display: inline-block;
+        position: relative;
+        background: #3498db;
+    }
+    .apply-board-title{
+        display: block;
     }
 </style>
