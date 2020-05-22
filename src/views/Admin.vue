@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="account-right account-layout">
-
+                <manage-item-card></manage-item-card>
             </div>
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="chall-board board">
@@ -75,8 +75,10 @@
 </template>
 
 <script>
+    import ManageItemCard from "../components/manageItemCard";
     export default {
-        name: "Admin"
+        name: "Admin",
+        components: {ManageItemCard}
     }
 </script>
 
