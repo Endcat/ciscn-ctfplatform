@@ -4,27 +4,37 @@
             Admin
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="overview-board board">
-            <div class="title color-board-title">
+            <div class="title overview-board-title">
                 Overview
             </div>
+            <div class="overview-left overview-layout">
+
+            </div>
+            <div class="overview-mid overview-layout">
+
+            </div>
+            <div class="overview-right overview-layout">
+                
+            </div>
+
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="account-board board">
-            <div class="title color-board-title">
+            <div class="title account-board-title">
                 Manage Accounts
             </div>
         </div>
-        <div :style="$store.state.activeScheme.boxShadow" class="challenge-board board">
-            <div class="title color-board-title">
+        <div :style="$store.state.activeScheme.boxShadow" class="chall-board board">
+            <div class="title chall-board-title">
                 Manage Challenges
             </div>
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="notice-board board">
-            <div class="title color-board-title">
+            <div class="title notice-board-title">
                 Manage Notices
             </div>
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="issue-board board">
-            <div class="title color-board-title">
+            <div class="title issue-board-title">
                 Manage Issues
             </div>
         </div>
@@ -73,5 +83,10 @@
 
     .board:hover{
         transform: translate(0, -5px);
+    }
+    .overview-layout{
+        width: 30%;
+        height: 100px;
+        background: cadetblue;
     }
 </style>
