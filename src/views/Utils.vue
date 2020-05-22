@@ -296,21 +296,21 @@
         position: relative;
     }
     #apply-left{
-        width: 30%;
+        width: 40%;
         text-align: center;
         display: inline-block;
         float: left;
         position: relative;
     }
     #apply-mid{
-        width: 40%;
+        width: 20%;
         text-align: center;
         margin: 0 auto;
         display: inline-block;
         position: relative;
     }
     #apply-right{
-        width: 30%;
+        width: 40%;
         text-align: center;
         line-height: 40px;
         font-size: 20px;
