@@ -8,13 +8,22 @@
                 Overview
             </div>
             <div class="overview-left overview-layout">
-
+                <div class="overview-circle">4352</div>
+                <div class="overview-msg">
+                    Total<br>Teams
+                </div>
             </div>
             <div class="overview-mid overview-layout">
-
+                <div class="overview-circle">9578</div>
+                <div class="overview-msg">
+                    Total<br>Submissions
+                </div>
             </div>
             <div class="overview-right overview-layout">
-                
+                <div class="overview-circle">7386</div>
+                <div class="overview-msg">
+                    Total<br>Challenges
+                </div>
             </div>
 
         </div>
@@ -84,9 +93,32 @@
     .board:hover{
         transform: translate(0, -5px);
     }
+    .overview-board{
+        height: 300px;
+        width: 600px;
+    }
     .overview-layout{
-        width: 30%;
-        height: 100px;
-        background: cadetblue;
+        margin-left: 20px;
+        display: inline-block;
+        float: left;
+        width: 25%;
+        height: 70%;
+        text-align: center;
+    }
+    .overview-circle{
+        width: 140px;
+        height: 140px;
+        border-radius: 75px;
+        margin: 0 auto;
+        line-height: 140px;
+        font-size: 35px;
+        border: #383838 solid 1px;
+    }
+    .overview-msg{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .overview-left{
+        margin-left: 60px;
     }
 </style>
