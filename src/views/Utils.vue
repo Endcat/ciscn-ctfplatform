@@ -41,6 +41,10 @@
                 <div class="title issue-board-title">
                     Issue
                 </div>
+                <form action="xxx" method="get">
+                    <input :style="$store.state.activeScheme.boxShadow" class="submit-btn" type="submit" value="Submit" />
+                    <textarea id="issue-content" type="text" name="issue" />
+                </form>
             </div>
         </div>
         <div class="right-board">
@@ -317,7 +321,46 @@
     .apply-board-title{
         display: block;
     }
-    .nettop-status{
+    .submit-btn{
+        position: relative;
+        width: 100px;
+        height: 40px;
+        font-size: 17px;
+        line-height: 40px;
+        border-radius: 50px;
         text-align: center;
+        text-indent: 0;
+        transition: all 0.2s linear;
+        border: none;
+        background: linear-gradient(to bottom right, rgb(63, 186, 80), rgb(119, 180, 124));
+    }
+    .issue-board input{
+        display: block;
+        outline-style: none;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .issue-board textarea{
+        display: block;
+        outline-style: none;
+        margin-left: 20px;
+        margin-top: 20px;
+        resize: none;
+    }
+    #issue-content{
+        position: relative;
+        height: 120px;
+        border-radius: 10px;
+        width: 90%;
+        outline-style: none;
+        border: 1px solid #ccc;
+    }
+    .submit-btn:active{
+        color: white;
+        background: linear-gradient(to bottom right, rgb(174, 186, 248), rgb(202, 218, 248));
+    }
+    .submit-btn:hover {
+        color: white;
+
     }
 </style>
