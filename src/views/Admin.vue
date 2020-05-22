@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="account-right account-layout">
-                <manage-item-card></manage-item-card>
+                <manage-item-card title="test" circle-color="#888888" stat="test"></manage-item-card>
             </div>
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="chall-board board">
