@@ -30,8 +30,10 @@
                     <img src="@/assets/icons/laptop.png" id="nettop-img" alt="nettop-img">
                 </div>
                 <div id="apply-right">
-                    <div :style="$store.state.activeScheme.boxShadow" class="request-btn nettop-btn" >Request</div>
-                    <div :style="$store.state.activeScheme.boxShadow" class="cancel-btn nettop-btn" >Cancel</div>
+                    Available NetTops:<br/>
+                    xx/xx<br/>
+                    Queue Status:<br/>
+                    xx/xx
                 </div>
                 
             </div>
@@ -241,7 +243,7 @@
         position: relative;
         width: 150px;
         height: 50px;
-        font-size: 25px;
+        font-size: 20px;
         line-height: 50px;
         border-radius: 50px;
         text-align: center;
@@ -262,7 +264,7 @@
         position: relative;
         width: 150px;
         height: 50px;
-        font-size: 25px;
+        font-size: 20px;
         line-height: 50px;
         border-radius: 50px;
         text-align: center;
@@ -280,31 +282,42 @@
 
     }
     .nettop-btn{
-        display: block;
+        display: inline-block;
         position: relative;
-        margin-top: 20px;
+        margin: 15px auto;
     }
     #nettop-img{
+        padding-top: 20px;
         width: 150px;
         position: relative;
     }
     #apply-left{
         width: 30%;
+        text-align: center;
         display: inline-block;
+        float: left;
         position: relative;
-        background: #9b59b6;
     }
     #apply-mid{
+        width: 40%;
+        text-align: center;
+        margin: 0 auto;
         display: inline-block;
         position: relative;
-        background: #7f8c8d;
     }
     #apply-right{
+        width: 30%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        float: right;
         display: inline-block;
         position: relative;
-        background: #3498db;
     }
     .apply-board-title{
         display: block;
+    }
+    .nettop-status{
+        text-align: center;
     }
 </style>
