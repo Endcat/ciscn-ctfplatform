@@ -7,6 +7,8 @@ import Ranking from "../views/Ranking";
 import Utils from "../views/Utils";
 import Login from "../views/Login";
 import Admin from "../views/Admin";
+import ManageAccount from "../views/ManageAccount";
+import ManageChalls from "../views/ManageChalls";
 
 Vue.use(VueRouter)
 
@@ -18,7 +20,9 @@ const routes = [
   { path: '/ranking', component: Ranking},
   { path: '/utils', component: Utils},
   { path: '/login', component: Login},
-  { path: '/admin', component: Admin}
+  { path: '/admin', component: Admin},
+  { path: '/manage/account/:id', component: ManageAccount},
+  { path: '/manage/challenge/:id', component: ManageChalls}
 ]
 
 const router = new VueRouter({

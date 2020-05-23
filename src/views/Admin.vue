@@ -41,7 +41,14 @@
                 </div>
             </div>
             <div class="account-right account-layout">
-                <manage-item-card title="test" circle-color="#888888" stat="test"></manage-item-card>
+                <manage-item-card category="account" title="test" circle-color="#888888" stat="test"></manage-item-card>
+                <manage-item-card category="account" title="test" circle-color="#903754" stat="test"></manage-item-card>
+                <manage-item-card category="account" title="test" circle-color="#137846" stat="test"></manage-item-card>
+                <manage-item-card category="account" title="test" circle-color="#204868" stat="test"></manage-item-card>
+                <manage-item-card category="account" title="test" circle-color="#986145" stat="test"></manage-item-card>
+                <manage-item-card category="account" title="test" circle-color="#980012" stat="test"></manage-item-card>
+                <manage-item-card category="account" title="test" circle-color="#357073" stat="test"></manage-item-card>
+                <manage-item-card category="account" title="test" circle-color="#114514" stat="test"></manage-item-card>
             </div>
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="chall-board board">
@@ -58,7 +65,14 @@
                 </div>
             </div>
             <div class="chall-right chall-layout">
-
+                <manage-item-card category="challenge" title="test" circle-color="#888888" stat="test"></manage-item-card>
+                <manage-item-card category="challenge" title="test" circle-color="#903754" stat="test"></manage-item-card>
+                <manage-item-card category="challenge" title="test" circle-color="#137846" stat="test"></manage-item-card>
+                <manage-item-card category="challenge" title="test" circle-color="#204868" stat="test"></manage-item-card>
+                <manage-item-card category="challenge" title="test" circle-color="#986145" stat="test"></manage-item-card>
+                <manage-item-card category="challenge" title="test" circle-color="#980012" stat="test"></manage-item-card>
+                <manage-item-card category="challenge" title="test" circle-color="#357073" stat="test"></manage-item-card>
+                <manage-item-card category="challenge" title="test" circle-color="#114514" stat="test"></manage-item-card>
             </div>
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="notice-board board">
@@ -170,7 +184,7 @@
     }
     .account-right{
         width: 70%;
-        background: #00a2ff;
+        overflow-x: scroll;
     }
     .team-result{
         width: 140px;
@@ -213,7 +227,7 @@
     }
     .chall-right{
         width: 70%;
-        background: #00a2ff;
+        overflow-x: scroll;
     }
     .chall-result{
         width: 140px;
