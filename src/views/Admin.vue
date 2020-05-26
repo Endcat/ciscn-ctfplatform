@@ -84,15 +84,28 @@
             <div class="title issue-board-title">
                 Manage Issues
             </div>
+            <div class="issue-layout">
+                <issue-card category="challenge" title="test" circle-color="#888888" stat="test"></issue-card>
+                <issue-card category="challenge" title="test" circle-color="#903754" stat="test"></issue-card>
+                <issue-card category="challenge" title="test" circle-color="#137846" stat="test"></issue-card>
+                <issue-card category="challenge" title="test" circle-color="#204868" stat="test"></issue-card>
+                <issue-card category="challenge" title="test" circle-color="#986145" stat="test"></issue-card>
+                <issue-card category="challenge" title="test" circle-color="#980012" stat="test"></issue-card>
+                <issue-card category="challenge" title="test" circle-color="#357073" stat="test"></issue-card>
+                <issue-card category="challenge" title="test" circle-color="#114514" stat="test"></issue-card>
+                <issue-card category="challenge" title="test" circle-color="#114514" stat="test"></issue-card>
+                <issue-card category="challenge" title="test" circle-color="#114514" stat="test"></issue-card>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
     import ManageItemCard from "../components/manageItemCard";
+    import IssueCard from "../components/IssueCard";
     export default {
         name: "Admin",
-        components: {ManageItemCard},
+        components: {IssueCard, ManageItemCard},
         methods: {
             goNewChall: function () {
                 this.$router.push({ path: "/manage/newchall" })
@@ -279,5 +292,11 @@
         background: linear-gradient(to bottom right, rgb(63, 186, 80), rgb(119, 180, 124));
         float: right;
         margin-right: 40px;
+    }
+    .issue-layout{
+        margin-left: 20px;
+    }
+    .issue-board{
+        overflow-y: scroll;
     }
 </style>

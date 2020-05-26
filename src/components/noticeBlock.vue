@@ -5,6 +5,7 @@
         </div>
         <div class="notice-content">
             {{noticeContent}}
+            <slot></slot>
         </div>
     </div>
 </template>

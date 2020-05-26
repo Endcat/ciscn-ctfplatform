@@ -1,5 +1,5 @@
 <template>
-    <div id="manage-item-card" :style="$store.state.activeScheme.boxShadow" @click="goManageView">
+    <div id="issue-card" :style="$store.state.activeScheme.boxShadow">
         <div class="item-circle" :style="colorStyle">
 
         </div>
@@ -9,7 +9,7 @@
         <div class="item-stat">
             {{stat}}
         </div>
-        <slot></slot>
+        <span class="issue-status" @click="switchStatus">{{issueStatus}}</span>
     </div>
 </template>
 
@@ -19,40 +19,45 @@
             circleColor: String,
             category: String,
             title: String,
-            stat: String
+            stat: String,
+        },
+        data() {
+            return {
+                issueStatus: "UNDONE",
+            }
         },
         computed:{
             colorStyle: function () {
                 return "background: " + this.circleColor
-             },
-
+            },
         },
-        methods:{
-          goManageView: function () {
-              let routerUrl = '/manage/' + this.$props.category + '/' + this.$props.title;
-              this.$router.push({ path: routerUrl })
+        methods: {
+          switchStatus: function () {
+              if (this.issueStatus === "UNDONE"){
+                  this.issueStatus = "DONE"
+              }
           }
         },
-        name: "manageItemCard"
+        name: "IssueCard"
     }
 </script>
 
 <style scoped>
-#manage-item-card{
-    position: relative;
-    float: left;
-    width: 200px;
-    height: 250px;
-    text-align: center;
-    border-radius: 15px;
-    transition: all ease-in-out 0.2s;
-    margin-left: 30px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-#manage-item-card:hover{
-    transform: translate(0, -5px);
-}
+    #issue-card{
+        position: relative;
+        float: left;
+        width: 200px;
+        height: 260px;
+        text-align: center;
+        border-radius: 15px;
+        transition: all ease-in-out 0.2s;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    #issue-card:hover{
+        transform: translate(0, -5px);
+    }
     .item-circle{
         width: 140px;
         height: 140px;
@@ -70,5 +75,6 @@
     .item-stat{
         font-size: 20px;
         margin-top: 5px;
+        margin-bottom: 10px;
     }
 </style>

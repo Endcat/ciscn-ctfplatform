@@ -93,7 +93,7 @@
         margin-bottom: 20px;
     }
     .right-board{
-        width: 70%;
+        width: 65%;
         min-width: 500px;
         height: 750px;
         float: left;

@@ -10,6 +10,7 @@ import Admin from "../views/Admin";
 import ManageAccount from "../views/ManageAccount";
 import ManageChalls from "../views/ManageChalls";
 import NewChall from "../views/NewChall";
+import ChallInfo from "../views/ChallInfo";
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,7 @@ const routes = [
   { path: '/homepage', component: Homepage},
   { path: '/dashboard', component: Dashboard},
   { path: '/challenge', component: Challenge},
+  { path: '/challenge/:id', component: ChallInfo},
   { path: '/ranking', component: Ranking},
   { path: '/utils', component: Utils},
   { path: '/login', component: Login},
