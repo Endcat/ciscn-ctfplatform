@@ -44,6 +44,9 @@
         methods: {
             starredPasswd() {
                 this.teamPasswd = '*'.repeat(this.teamPasswd.length)
+            },
+            goHomepage() {
+                this.$router.push("/homepage");
             }
         }
     }
@@ -133,7 +136,6 @@
         font-size: 24px;
         font-family: "Microsoft JhengHei",sans-serif;
         text-indent: 20px;
-
     }
     .submit-btn{
         text-indent: 0;

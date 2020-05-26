@@ -9,6 +9,7 @@ import Login from "../views/Login";
 import Admin from "../views/Admin";
 import ManageAccount from "../views/ManageAccount";
 import ManageChalls from "../views/ManageChalls";
+import NewChall from "../views/NewChall";
 
 Vue.use(VueRouter)
 
@@ -22,7 +23,8 @@ const routes = [
   { path: '/login', component: Login},
   { path: '/admin', component: Admin},
   { path: '/manage/account/:id', component: ManageAccount},
-  { path: '/manage/challenge/:id', component: ManageChalls}
+  { path: '/manage/challenge/:id', component: ManageChalls},
+  { path:'/manage/newchall', component: NewChall}
 ]
 
 const router = new VueRouter({

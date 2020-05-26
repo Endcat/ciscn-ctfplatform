@@ -53,7 +53,7 @@
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="chall-board board">
             <div class="title chall-board-title">
-                Manage Challenges
+                Manage Challenges<div :style="$store.state.activeScheme.boxShadow" class="submit-btn" @click="goNewChall">New</div>
             </div>
             <div class="chall-left chall-layout">
                 <div class="chall-result">
@@ -92,7 +92,12 @@
     import ManageItemCard from "../components/manageItemCard";
     export default {
         name: "Admin",
-        components: {ManageItemCard}
+        components: {ManageItemCard},
+        methods: {
+            goNewChall: function () {
+                this.$router.push({ path: "/manage/newchall" })
+            }
+        }
     }
 </script>
 
@@ -251,5 +256,28 @@
         font-size: 20px;
         font-family: "Microsoft JhengHei",sans-serif;
         text-indent: 20px;
+    }
+    .submit-btn:active{
+        color: white;
+        background: linear-gradient(to bottom right, rgb(174, 186, 248), rgb(202, 218, 248));
+    }
+    .submit-btn:hover {
+        color: white;
+
+    }
+    .submit-btn{
+        position: relative;
+        width: 100px;
+        height: 40px;
+        font-size: 17px;
+        line-height: 40px;
+        border-radius: 50px;
+        text-align: center;
+        text-indent: 0;
+        transition: all 0.2s linear;
+        border: none;
+        background: linear-gradient(to bottom right, rgb(63, 186, 80), rgb(119, 180, 124));
+        float: right;
+        margin-right: 40px;
     }
 </style>
