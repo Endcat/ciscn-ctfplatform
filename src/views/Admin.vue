@@ -79,6 +79,29 @@
             <div class="title notice-board-title">
                 Manage Notices
             </div>
+            <div class="notice-block-left">
+                <div class="notice-result">
+                    1473
+                </div>
+                <div class="search-wrapper">
+                    <div class="search-title">Search</div>
+                    <input class="notice-search-bar" type="text" placeholder="search by content"></input>
+                </div>
+            </div>
+            <div class="notice-block-right">
+                <notice-block notice-content="My content is Notice 1" notice-title="Notice">
+                    <span style="float: right; margin-right: 30px; color: red">DELETE</span>
+                </notice-block>
+                <notice-block notice-content="My content is Notice 2" notice-title="Notice">
+                    <span style="float: right; margin-right: 30px; color: red">DELETE</span>
+                </notice-block>
+                <notice-block notice-content="My content is Notice 3" notice-title="Notice">
+                    <span style="float: right; margin-right: 30px; color: red">DELETE</span>
+                </notice-block>
+                <notice-block notice-content="My content is Notice 4" notice-title="Notice">
+                    <span style="float: right; margin-right: 30px; color: red">DELETE</span>
+                </notice-block>
+            </div>
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="issue-board board">
             <div class="title issue-board-title">
@@ -103,9 +126,10 @@
 <script>
     import ManageItemCard from "../components/manageItemCard";
     import IssueCard from "../components/IssueCard";
+    import NoticeBlock from "../components/noticeBlock";
     export default {
         name: "Admin",
-        components: {IssueCard, ManageItemCard},
+        components: {NoticeBlock, IssueCard, ManageItemCard},
         methods: {
             goNewChall: function () {
                 this.$router.push({ path: "/manage/newchall" })
@@ -223,7 +247,20 @@
         width: 70%;
         outline-style: none;
         border: 1px solid #ccc;
-        font-size: 20px;
+        font-size: 15px;
+        font-family: "Microsoft JhengHei",sans-serif;
+        text-indent: 20px;
+    }
+    .notice-search-bar{
+        position: relative;
+        margin-top: 20px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 35px;
+        width: 70%;
+        outline-style: none;
+        border: 1px solid #ccc;
+        font-size: 15px;
         font-family: "Microsoft JhengHei",sans-serif;
         text-indent: 20px;
     }
@@ -247,6 +284,24 @@
         width: 70%;
         overflow-x: scroll;
     }
+    .notice-block-left{
+        width: 20%;
+        text-align: center;
+        position: relative;
+        float: left;
+        height: 70%;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+    .notice-block-right{
+        width: 70%;
+        overflow-y: scroll;
+        position: relative;
+        float: left;
+        height: 70%;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
     .chall-result{
         width: 140px;
         height: 140px;
@@ -257,6 +312,16 @@
         font-size: 35px;
         background: linear-gradient(to right bottom, #bfd52d, #aadf33, #90e83f, #6cf150, #24f965);
     }
+    .notice-result{
+        width: 140px;
+        height: 140px;
+        border-radius: 75px;
+        margin: 0 auto;
+        line-height: 140px;
+        text-align: center;
+        font-size: 35px;
+        background: linear-gradient(to right bottom, #6868eb, #00a2ff, #00c8f0, #00e18f, #a8eb12);
+    }
     .chall-search-bar{
         position: relative;
         margin-top: 20px;
@@ -266,7 +331,7 @@
         width: 70%;
         outline-style: none;
         border: 1px solid #ccc;
-        font-size: 20px;
+        font-size: 15px;
         font-family: "Microsoft JhengHei",sans-serif;
         text-indent: 20px;
     }

@@ -13,7 +13,7 @@
                         </div>
                         <div class="top-team-board-right">
                             <div class="team-name">
-                                f1sh
+                                FooBar1
                             </div>
                             <div class="team-score">
                                 1234567Pt
@@ -26,7 +26,7 @@
                         </div>
                         <div class="top-team-board-right">
                             <div class="team-name">
-                                w1nd
+                                FooBar2
                             </div>
                             <div class="team-score">
                                 123456Pt
@@ -39,7 +39,7 @@
                         </div>
                         <div class="top-team-board-right">
                             <div class="team-name">
-                                Frank
+                                FooBar3
                             </div>
                             <div class="team-score">
                                 114515Pt
@@ -63,25 +63,25 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>f1sh</td>
+                        <td>FooBar1</td>
                         <td>1234567Pt</td>
                         <td>1234</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>w1nd</td>
+                        <td>FooBar2</td>
                         <td>123456Pt</td>
                         <td>321</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Frank</td>
+                        <td>FooBar3</td>
                         <td>114515Pt</td>
                         <td>123</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>EndCat</td>
+                        <td>FooBar4</td>
                         <td>114514Pt</td>
                         <td>71</td>
                     </tr>

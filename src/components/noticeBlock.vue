@@ -37,7 +37,6 @@
         display: block;
         border-radius: 15px;
         width: 95%;
-        height: 100%;
         transition: all 0.2s linear;
         margin-top: 30px;
     }

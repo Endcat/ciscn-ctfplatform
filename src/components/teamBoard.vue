@@ -19,7 +19,7 @@
                     <img id="team-avatar" src="@/assets/mashirosmall.jpg" alt="team-avatar">
                 </li>
                 <li id="team-id">
-                    EndCat
+                    FooBar1
                 </li>
                 <li id="team-score">
                     114514Pt

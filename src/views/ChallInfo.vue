@@ -47,22 +47,22 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>f1sh</td>
+                        <td>FooBar1</td>
                         <td>2020-5-26 21:16:27</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>w1nd</td>
+                        <td>FooBar2</td>
                         <td>2020-5-26 21:16:27</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Frank</td>
+                        <td>FooBar3</td>
                         <td>2020-5-26 21:16:27</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>EndCat</td>
+                        <td>FooBar4</td>
                         <td>2020-5-26 21:16:27</td>
                     </tr>
                 </table>

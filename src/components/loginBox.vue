@@ -2,9 +2,9 @@
     <div  class="base-container" :style="$store.state.activeScheme.boxShadow">
         <div class="nav-bar">
             <ul>
-                <li class="red-btn"></li>
-                <li class="yellow-btn"></li>
-                <li class="green-btn"></li>
+                <li @click="goHomepage" class="red-btn"></li>
+                <li @click="goHomepage" class="yellow-btn"></li>
+                <li @click="goHomepage" class="green-btn"></li>
             </ul>
         </div>
         <div class="info-block">
@@ -18,7 +18,7 @@
                     <input type="text" v-model="teamName" name="team-name" placeholder="Team Name"><br>
                     <input type="text" v-model="teamPasswd" name="team-passwd" @keyup="starredPasswd" placeholder="Password">
                 </label><br>
-                <input :style="$store.state.activeScheme.boxShadow" class="submit-btn" type="submit" value="Submit">
+                <input :style="$store.state.activeScheme.boxShadow" @click="goHomepage" class="submit-btn" value="Submit">
             </form>
         </div>
     </div>
@@ -66,7 +66,7 @@
         transition: all 0.2s linear;
     }
     .base-container:hover {
-        transform: translate(-50%, -52%);
+        transform: translate(-50%, -51%);
     }
     .nav-bar {
         width: 100%;
@@ -139,6 +139,7 @@
     }
     .submit-btn{
         text-indent: 0;
+        text-align: center;
         transition: all 0.2s linear;
         border: none;
         background: linear-gradient(to bottom right, rgb(63, 186, 80), rgb(119, 180, 124));
