@@ -25,4 +25,4 @@ Vue.js
 | /challenge  | challenge list with filter function (secondary router)  | done |
 | /ranking  | ranking list (show top 5)  | done |
 | /utils  | settings of platform & nettop application  | done  |
-| /admin  | dashboard for admin, including server monitoring, platform management, etc.  | developing  |
+| /admin  | dashboard for admin, including server monitoring, platform management, etc.  | done  |
