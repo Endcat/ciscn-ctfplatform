@@ -16,7 +16,7 @@ npm run serve
 ## Tech Stack
 Vue.js
 
-## Structure
+## Develop Progress (preview ver)
 | Router | Functions | Progress |
 |---|---|---|
 | /login | login team | done |
