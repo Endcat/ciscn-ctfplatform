@@ -10,7 +10,7 @@ export default new Vuex.Store({
         'background': 'linear-gradient(to bottom right, rgb(222, 232, 237), rgb(211, 220, 226))',
       },
       boxShadow: {
-        'box-shadow': '0 10px 30px 0 rgb(156,175,171)',
+        'box-shadow': '0 4px 10px 0 rgb(156,175,171)',
         'color': '#383838',
       },
       fontColor: {
