@@ -2,9 +2,9 @@
     <div  class="base-container" :style="$store.state.activeScheme.boxShadow">
         <div class="nav-bar">
             <ul>
-                <li @click="goHomepage" class="red-btn"></li>
-                <li @click="goHomepage" class="yellow-btn"></li>
-                <li @click="goHomepage" class="green-btn"></li>
+                <li class="red-btn"></li>
+                <li class="yellow-btn"></li>
+                <li class="green-btn"></li>
             </ul>
         </div>
         <div class="info-block">
