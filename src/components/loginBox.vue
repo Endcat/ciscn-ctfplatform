@@ -18,7 +18,7 @@
                     <input type="text" v-model="teamName" name="team-name" placeholder="Team Name"><br>
                     <input type="text" v-model="teamPasswd" name="team-passwd" @keyup="starredPasswd" placeholder="Password">
                 </label><br>
-                <input :style="$store.state.activeScheme.boxShadow" @click="goHomepage" class="submit-btn" value="Submit">
+                <input :style="$store.state.activeScheme.boxShadow" @click="loginFunc" class="submit-btn" value="Submit">
             </form>
         </div>
     </div>
@@ -32,6 +32,9 @@
             baseHeight: String,
             teamName: String,
             teamPasswd: String,
+            teamShowPasswd: String,
+            currentPasswdLength: Number,
+
         },
         data: function () {
             return {
@@ -42,11 +45,10 @@
             }
         },
         methods: {
-            starredPasswd() {
-                this.teamPasswd = '*'.repeat(this.teamPasswd.length)
-            },
-            goHomepage() {
-                this.$router.push("/homepage");
+            starredPasswd() {},
+            loginFunc() {
+                console.log(this.teamName);
+                console.log(this.teamPasswd);
             }
         }
     }

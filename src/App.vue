@@ -15,11 +15,14 @@
   import loginBox from "./components/loginBox";
   import SideBar from "./components/sideBar";
   export default {
-    name: 'app',
-    components: {
-        SideBar,
-      loginBox,
-    }
+      name: 'app',
+      components: {
+          SideBar,
+          loginBox,
+      },
+      mounted() {
+
+      }
   }
 </script>
 
