@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="notice-block-right">
-                <notice-block v-for="item in noticeList" :notice-content="item.content" :notice-title="item.title"></notice-block>
+                <notice-block v-for="item in noticeList" :id="item.id" :notice-content="item.content" :notice-title="item.title"></notice-block>
             </div>
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="issue-board board">

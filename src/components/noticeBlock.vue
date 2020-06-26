@@ -1,5 +1,5 @@
 <template>
-    <div id="notice-block" :style="$store.state.activeScheme.boxShadow">
+    <div id="notice-block" :style="$store.state.activeScheme.boxShadow" @click="goManageNotices">
         <div class="notice-title">
             {{noticeTitle}}
         </div>
@@ -17,6 +17,12 @@
             noticeTitle: String,
             noticeContent: String,
             id: Number,
+        },
+        methods: {
+            goManageNotices: function () {
+                let routerUrl = '/manage/notice/' + this.$props.id;
+                this.$router.push({ path: routerUrl });
+            }
         }
     }
 </script>
