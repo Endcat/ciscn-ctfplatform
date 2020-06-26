@@ -11,6 +11,7 @@ import ManageAccount from "../views/ManageAccount";
 import ManageChalls from "../views/ManageChalls";
 import NewChall from "../views/NewChall";
 import ChallInfo from "../views/ChallInfo";
+import NewNotice from "../views/NewNotice";
 
 Vue.use(VueRouter)
 
@@ -26,7 +27,8 @@ const routes = [
   { path: '/admin', component: Admin},
   { path: '/manage/account/:id', component: ManageAccount},
   { path: '/manage/challenge/:id', component: ManageChalls},
-  { path:'/manage/newchall', component: NewChall}
+  { path:'/manage/newchall', component: NewChall},
+  { path:'/manage/newnotice', component: NewNotice},
 ]
 
 const router = new VueRouter({

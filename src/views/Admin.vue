@@ -77,7 +77,7 @@
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="notice-board board">
             <div class="title notice-board-title">
-                Manage Notices
+                Manage Notices<div :style="$store.state.activeScheme.boxShadow" class="submit-btn" @click="goNewNotice">New</div>
             </div>
             <div class="notice-block-left">
                 <div class="notice-result">
@@ -135,6 +135,9 @@
         methods: {
             goNewChall: function () {
                 this.$router.push({ path: "/manage/newchall" })
+            },
+            goNewNotice: function () {
+                this.$router.push({ path: "/manage/newnotice" })
             },
             issueDel: function (id) {
                 let del;
