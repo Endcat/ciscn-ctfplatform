@@ -20,6 +20,7 @@
             category: String,
             title: String,
             stat: String,
+            id: Number,
         },
         data() {
             return {
@@ -33,9 +34,7 @@
         },
         methods: {
           switchStatus: function () {
-              if (this.issueStatus === "UNDONE"){
-                  this.issueStatus = "DONE"
-              }
+              this.$emit('issueDelEvent',this.id);
           }
         },
         name: "IssueCard"

@@ -15,7 +15,8 @@
         name: "noticeBlock",
         props: {
             noticeTitle: String,
-            noticeContent: String
+            noticeContent: String,
+            id: Number,
         }
     }
 </script>

@@ -16,7 +16,7 @@
         props: {
             challTitle: String,
             challCategory: String,
-            challScore: Number,
+            challScore: String,
         },
         methods:{
             goChallInfo: function () {

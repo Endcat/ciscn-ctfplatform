@@ -89,18 +89,7 @@
                 </div>
             </div>
             <div class="notice-block-right">
-                <notice-block notice-content="My content is Notice 1" notice-title="Notice">
-                    <span style="float: right; margin-right: 30px; color: red">DELETE</span>
-                </notice-block>
-                <notice-block notice-content="My content is Notice 2" notice-title="Notice">
-                    <span style="float: right; margin-right: 30px; color: red">DELETE</span>
-                </notice-block>
-                <notice-block notice-content="My content is Notice 3" notice-title="Notice">
-                    <span style="float: right; margin-right: 30px; color: red">DELETE</span>
-                </notice-block>
-                <notice-block notice-content="My content is Notice 4" notice-title="Notice">
-                    <span style="float: right; margin-right: 30px; color: red">DELETE</span>
-                </notice-block>
+                <notice-block v-for="item in noticeList" :notice-content="item.content" :notice-title="item.title"></notice-block>
             </div>
         </div>
         <div :style="$store.state.activeScheme.boxShadow" class="issue-board board">
@@ -108,16 +97,7 @@
                 Manage Issues
             </div>
             <div class="issue-layout">
-                <issue-card category="challenge" title="test" circle-color="#888888" stat="test"></issue-card>
-                <issue-card category="challenge" title="test" circle-color="#903754" stat="test"></issue-card>
-                <issue-card category="challenge" title="test" circle-color="#137846" stat="test"></issue-card>
-                <issue-card category="challenge" title="test" circle-color="#204868" stat="test"></issue-card>
-                <issue-card category="challenge" title="test" circle-color="#986145" stat="test"></issue-card>
-                <issue-card category="challenge" title="test" circle-color="#980012" stat="test"></issue-card>
-                <issue-card category="challenge" title="test" circle-color="#357073" stat="test"></issue-card>
-                <issue-card category="challenge" title="test" circle-color="#114514" stat="test"></issue-card>
-                <issue-card category="challenge" title="test" circle-color="#114514" stat="test"></issue-card>
-                <issue-card category="challenge" title="test" circle-color="#114514" stat="test"></issue-card>
+                <issue-card v-for="(item, i) in issueList" v-on:issueDelEvent="issueDel" :id="item.id" category="challenge" :title="item.title" :circle-color="item.color" :stat="item.stat"></issue-card>
             </div>
         </div>
     </div>
@@ -130,9 +110,46 @@
     export default {
         name: "Admin",
         components: {NoticeBlock, IssueCard, ManageItemCard},
+        data: function(){
+            return {
+                noticeList: [
+                    {id:1, content:"My content is Notice 1", title:"Notice"},
+                    {id:2, content:"My content is Notice 2", title:"Notice"},
+                    {id:3, content:"My content is Notice 3", title:"Notice"},
+                    {id:4, content:"My content is Notice 4", title:"Notice"},
+                ],
+                issueList: [
+                    {id:1, title:"test", stat:"test", color:"#888888"},
+                    {id:2, title:"test", stat:"test", color:"#903754"},
+                    {id:3, title:"test", stat:"test", color:"#137846"},
+                    {id:4, title:"test", stat:"test", color:"#204868"},
+                    {id:5, title:"test", stat:"test", color:"#986145"},
+                    {id:6, title:"test", stat:"test", color:"#980012"},
+                    {id:7, title:"test", stat:"test", color:"#357073"},
+                    {id:8, title:"test", stat:"test", color:"#114514"},
+                    {id:9, title:"test", stat:"test", color:"#114514"},
+                    {id:10, title:"test", stat:"test", color:"#114514"},
+                ]
+            }
+        },
         methods: {
             goNewChall: function () {
                 this.$router.push({ path: "/manage/newchall" })
+            },
+            issueDel: function (id) {
+                let del;
+                console.log('Delete issue by id: ' + id);
+                this.issueList.forEach(function (item, idx) {
+                    if (item.id === id) {
+                        del = idx;
+                    }
+                });
+                this.issueList.splice(del,1);
+                console.log('Current issueList: ');
+                console.log(this.issueList);
+            },
+            noticeDel: function () {
+                console.log("notice delete test");
             }
         }
     }
