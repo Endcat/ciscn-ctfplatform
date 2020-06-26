@@ -13,6 +13,7 @@ import NewChall from "../views/NewChall";
 import ChallInfo from "../views/ChallInfo";
 import NewNotice from "../views/NewNotice";
 import ManageNotices from "../views/ManageNotices";
+import Register from "../views/Register";
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,7 @@ const routes = [
   { path: '/ranking', component: Ranking},
   { path: '/utils', component: Utils},
   { path: '/login', component: Login},
+  { path: '/register', component: Register},
   { path: '/admin', component: Admin},
   { path: '/manage/account/:id', component: ManageAccount},
   { path: '/manage/challenge/:id', component: ManageChalls},

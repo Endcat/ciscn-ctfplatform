@@ -1,11 +1,11 @@
 <template>
     <div id="submission-bar" :style="$store.state.activeScheme.boxShadow">
-        <div class="submit-no">Submit #xxx</div>
+        <div class="submit-no">Submit #{{id}}</div>
         <div class="submit-content">
-            <div class="submit-category">Crypto</div>
-            <div class="submit-chall">Challenge xxx</div>
-            <div class="submit-flag">flag{xxxxx-xxxxxxxxxxx-xxxx-xxxxx}</div>
-            <div class="submit-status">Correct</div>
+            <div class="submit-category">{{category}}</div>
+            <div class="submit-chall">{{challName}}</div>
+            <div class="submit-flag">{{flag}}</div>
+            <div class="submit-status">{{status}}</div>
         </div>
         <div class="submit-undo-btn">
             <div class="undo-btn">Undo</div>
@@ -15,7 +15,14 @@
 
 <script>
     export default {
-        name: "SubmissionBar"
+        name: "SubmissionBar",
+        props: {
+            id: Number,
+            category: String,
+            challName: String,
+            flag: String,
+            status: String,
+        }
     }
 </script>
 

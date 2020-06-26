@@ -7,10 +7,6 @@ import axios from 'axios'
 
 axios.defaults.baseURL = store.state.BASE_URL;
 axios.defaults.timeout = 8000;
-axios.defaults.headers = {
-    'accept': 'application/json',
-    'Content-Type': 'application/json',
-}
 
 Vue.prototype.$http = axios;
 

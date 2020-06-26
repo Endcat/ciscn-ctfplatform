@@ -24,29 +24,19 @@
         </div>
         <div class="account-edit" :style="$store.state.activeScheme.boxShadow">
             <div class="account-info-title">
-                Edit Team
+                Edit Team<div :style="$store.state.activeScheme.boxShadow" class="submit-btn" @click="">Update</div>
             </div>
             <form action="xxx" method="get">
-                <input :style="$store.state.activeScheme.boxShadow" class="submit-btn" type="submit" value="Submit" />
-                <label>
                     <input type="text" v-model="teamName" name="team-name" placeholder="Edit team name">
-                    <input type="text" v-model="teamPasswd" name="team-passwd" @keyup="starredPasswd" placeholder="Edit password">
+                    <input type="text" v-model="teamPasswd" name="team-passwd"  placeholder="Edit password">
                     <input type="text" v-model="teamScore" name="team-score" placeholder="Edit score">
-                </label>
             </form>
         </div>
         <div class="account-submission" :style="$store.state.activeScheme.boxShadow">
             <div class="account-info-title">
                 Team Submission
             </div>
-            <submission-bar></submission-bar>
-            <submission-bar></submission-bar>
-            <submission-bar></submission-bar>
-            <submission-bar></submission-bar>
-            <submission-bar></submission-bar>
-            <submission-bar></submission-bar>
-            <submission-bar></submission-bar>
-            <submission-bar></submission-bar>
+            <submission-bar v-for="(item,i) in submitList" :id="item.id" :category="item.category" :chall-name="item.challName" :flag="item.flag" :status="item.Status"></submission-bar>
         </div>
     </div>
 </template>
@@ -59,6 +49,21 @@
             teamName: String,
             teamPasswd: String,
             teamScore: String,
+        },
+        data: function() {
+            return {
+                submitList: [
+                    {id: 1, category: "Crypto", challName: "Challenge xxx", flag: "flag{xxxxx-xxxxxxxxxxx-xxxx-xxxxx}", Status: "Correct",},
+                    {id: 2, category: "Crypto", challName: "Challenge xxx", flag: "flag{xxxxx-xxxxxxxxxxx-xxxx-xxxxx}", Status: "Correct",},
+                    {id: 3, category: "Crypto", challName: "Challenge xxx", flag: "flag{xxxxx-xxxxxxxxxxx-xxxx-xxxxx}", Status: "Correct",},
+                    {id: 4, category: "Crypto", challName: "Challenge xxx", flag: "flag{xxxxx-xxxxxxxxxxx-xxxx-xxxxx}", Status: "Correct",},
+                    {id: 5, category: "Crypto", challName: "Challenge xxx", flag: "flag{xxxxx-xxxxxxxxxxx-xxxx-xxxxx}", Status: "Correct",},
+                    {id: 6, category: "Crypto", challName: "Challenge xxx", flag: "flag{xxxxx-xxxxxxxxxxx-xxxx-xxxxx}", Status: "Correct",},
+                    {id: 7, category: "Crypto", challName: "Challenge xxx", flag: "flag{xxxxx-xxxxxxxxxxx-xxxx-xxxxx}", Status: "Correct",},
+                    {id: 8, category: "Crypto", challName: "Challenge xxx", flag: "flag{xxxxx-xxxxxxxxxxx-xxxx-xxxxx}", Status: "Correct",},
+                    {id: 9, category: "Crypto", challName: "Challenge xxx", flag: "flag{xxxxx-xxxxxxxxxxx-xxxx-xxxxx}", Status: "Correct",},
+                ]
+            }
         },
         methods: {
             starredPasswd() {
@@ -81,7 +86,7 @@
         position: relative;
         width: 50%;
         border-radius: 15px;
-        height: 320px;
+        height: 280px;
         margin-top: 30px;
     }
     .account-submission{
@@ -172,6 +177,8 @@
         transition: all 0.2s linear;
         border: none;
         background: linear-gradient(to bottom right, rgb(63, 186, 80), rgb(119, 180, 124));
+        float: right;
+        margin-right: 40px;
     }
 
     input {

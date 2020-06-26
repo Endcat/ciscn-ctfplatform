@@ -20,17 +20,7 @@ export default {
         SideBar,
         loginBox,
     },
-    mounted() {
-        this.$http({
-            url: '/users',
-            method: 'POST',
-            data: {
-                "name": "admin",
-                "email": "admin@endcat.cn",
-                "password": "admin",
-            }
-        });
-    },
+    mounted() {},
 };
 </script>
 

@@ -14,12 +14,11 @@
         </div>
         <div class="content">
             <form action="xxx" id="login-form">
-                <label>
                     <input
                         type="text"
-                        v-model="teamName"
+                        v-model="teamEmail"
                         name="team-name"
-                        placeholder="Team Name"
+                        placeholder="Email"
                     /><br />
                     <input
                         type="text"
@@ -27,13 +26,18 @@
                         name="team-passwd"
                         @keyup="starredPasswd"
                         placeholder="Password"
-                    /> </label
-                ><br />
+                    /><br />
                 <input
                     :style="$store.state.activeScheme.boxShadow"
                     @click="loginFunc"
                     class="submit-btn"
                     value="Submit"
+                />
+                <input
+                        :style="$store.state.activeScheme.boxShadow"
+                        @click="goRegister"
+                        class="register-btn"
+                        value="Register"
                 />
             </form>
         </div>
@@ -41,12 +45,13 @@
 </template>
 
 <script>
+    import qs from 'qs';
 export default {
     name: "baseObject",
     props: {
         baseWidth: String,
         baseHeight: String,
-        teamName: String,
+        teamEmail: String,
         teamPasswd: String,
         teamShowPasswd: String,
         currentPasswdLength: Number,
@@ -63,9 +68,27 @@ export default {
     methods: {
         starredPasswd() {},
         loginFunc() {
-            console.log("Team name: " + this.teamName);
+            console.log("Team Email: " + this.teamEmail);
             console.log("Team Passwd: " + this.teamPasswd);
+            this.$http({
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                method: 'POST',
+                url: '/sessions',
+                data: qs.stringify({
+                    "username": this.teamEmail,
+                    "password": this.teamPasswd,
+                })
+            }).then((res) => {
+                console.log(res);
+            }).catch((res) => {
+                console.log(res);
+            })
         },
+        goRegister() {
+            this.$router.push({ path: "/register" })
+        }
     },
 };
 </script>
@@ -73,7 +96,7 @@ export default {
 <style scoped>
 .base-container {
     width: 500px;
-    height: 600px;
+    height: 700px;
 
     position: relative;
     border-radius: 15px;
@@ -176,4 +199,27 @@ input {
 .submit-btn:hover {
     color: white;
 }
+.register-btn {
+    text-indent: 0;
+    text-align: center;
+    transition: all 0.2s linear;
+    border: none;
+    background: linear-gradient(
+            to bottom right,
+            rgb(186, 170, 63),
+            rgb(180, 167, 119)
+    );
+}
+.register-btn:active {
+    color: white;
+    background: linear-gradient(
+            to bottom right,
+            rgb(174, 186, 248),
+            rgb(202, 218, 248)
+    );
+}
+.register-btn:hover {
+    color: white;
+}
+
 </style>
