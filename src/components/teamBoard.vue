@@ -44,8 +44,30 @@
 </template>
 
 <script>
+    import qs from "qs";
+
     export default {
         name: "teamBoard",
+        beforeCreate() {
+            // this.$http({
+            //     headers: {
+            //         'Content-Type': 'application/x-www-form-urlencoded'
+            //     },
+            //     method: 'POST',
+            //     url: '/sessions',
+            //     data: qs.stringify({
+            //         "username": this.teamEmail,
+            //         "password": this.teamPasswd,
+            //     })
+            // }).then((res) => {
+            //     console.log(res);
+            //     console.log('Team access_token ' + res.data['access_token']);
+            //     this.$store.state.ACCESS_TOKEN = res.data['access_token'];
+            //     this.$router.push({ path: "/dashboard" })
+            // }).catch((res) => {
+            //     console.log(res);
+            // })
+        }
     }
 </script>
 
