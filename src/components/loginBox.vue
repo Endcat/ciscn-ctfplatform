@@ -9,7 +9,7 @@
         </div>
         <div class="info-block">
             <div class="info-title">
-                Login
+                Login <br/><span style="font-size: 20px">(test@test.com/test)</span>
             </div>
         </div>
         <div class="content">
@@ -65,6 +65,11 @@ export default {
         };
     },
     computed: {},
+    beforeCreate() {
+        if (this.$store.state.ACCESS_TOKEN) {
+            this.$router.push({ path: "/dashboard" })
+        }
+    },
     methods: {
         starredPasswd() {},
         loginFunc() {
@@ -82,6 +87,9 @@ export default {
                 })
             }).then((res) => {
                 console.log(res);
+                console.log('Team access_token ' + res.data['access_token']);
+                this.$store.state.ACCESS_TOKEN = res.data['access_token'];
+                this.$router.push({ path: "/dashboard" })
             }).catch((res) => {
                 console.log(res);
             })

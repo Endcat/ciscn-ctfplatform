@@ -94,7 +94,12 @@
 <script>
     export default {
         name: "Ranking",
-        components: {}
+        components: {},
+        beforeCreate() {
+            if (!this.$store.state.ACCESS_TOKEN) {
+                this.$router.push({ path: "/login" })
+            }
+        }
     }
 </script>
 

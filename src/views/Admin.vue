@@ -154,6 +154,11 @@
             noticeDel: function () {
                 console.log("notice delete test");
             }
+        },
+        beforeCreate() {
+            if (!this.$store.state.ACCESS_TOKEN) {
+                this.$router.push({ path: "/login" })
+            }
         }
     }
 </script>

@@ -45,6 +45,8 @@
 </template>
 
 <script>
+    import qs from "qs";
+
     export default {
         name: "registerBox",
         props: {
@@ -67,12 +69,44 @@
         computed: {},
         methods: {
             starredPasswd() {},
-            loginFunc() {
-                console.log("Team name: " + this.teamName);
-                console.log("Team Passwd: " + this.teamPasswd);
-            },
             goRegister() {
-                this.$router.push({ path: "/register" })
+                console.log('Team Name: ' + this.teamName);
+                console.log('Team Email: ' + this.teamEmail);
+                console.log('Team Password: ' + this.teamPasswd);
+                this.$http({
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'POST',
+                    url: '/users',
+                    data: {
+                        "name": this.teamName,
+                        "email": this.teamEmail,
+                        "password": this.teamPasswd,
+                    }
+                }).then((res) => {
+                    console.log(res);
+                    this.$http({
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        method: 'POST',
+                        url: '/sessions',
+                        data: qs.stringify({
+                            "username": this.teamEmail,
+                            "password": this.teamPasswd,
+                        })
+                    }).then((res) => {
+                        console.log(res);
+                        console.log('Team access_token ' + res.data['access_token']);
+                        this.$store.state.ACCESS_TOKEN = res.data['access_token'];
+                        this.$router.push({ path: "/dashboard" })
+                    }).catch((res) => {
+                        console.log(res);
+                    })
+                }).catch((res) => {
+                    console.log(res);
+                })
             }
         },
     };

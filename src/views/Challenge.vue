@@ -27,7 +27,12 @@
     import ChallFilter from "../components/challFilter";
     export default {
         name: "Challenge",
-        components: {ChallFilter, ChallList}
+        components: {ChallFilter, ChallList},
+        beforeCreate() {
+            if (!this.$store.state.ACCESS_TOKEN) {
+                this.$router.push({ path: "/login" })
+            }
+        }
     }
 </script>
 

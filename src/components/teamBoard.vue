@@ -45,7 +45,7 @@
 
 <script>
     export default {
-        name: "teamBoard"
+        name: "teamBoard",
     }
 </script>
 

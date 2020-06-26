@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     BASE_URL: "http://ctfa.konge.pw:10234/api/v1",
+    ACCESS_TOKEN: "",
     activeScheme:{
       background: {
         'background': 'linear-gradient(to bottom right, rgb(222, 232, 237), rgb(211, 220, 226))',

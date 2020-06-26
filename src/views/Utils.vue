@@ -100,6 +100,11 @@
                 this.$store.state.activeScheme.boxShadow = this.$store.state.yellowScheme.boxShadow;
                 this.$store.state.activeScheme.fontColor = this.$store.state.yellowScheme.fontColor;
             },
+        },
+        beforeCreate() {
+            if (!this.$store.state.ACCESS_TOKEN) {
+                this.$router.push({ path: "/login" })
+            }
         }
     }
 </script>

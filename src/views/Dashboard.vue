@@ -4,7 +4,7 @@
         <div class="left-board">
             <div :style="$store.state.activeScheme.boxShadow" class="leader-board">
                 <div class="title team-board-title">
-                    Your Team
+                    Your Team<div :style="$store.state.activeScheme.boxShadow" class="submit-btn" @click="logOut">Logout</div>
                 </div>
 <!--                TO DO Team display layout-->
                 <team-board></team-board>
@@ -38,7 +38,18 @@
     import NoticeBlock from "../components/noticeBlock";
     export default {
         name: "Dashboard",
-        components: {NoticeBlock, TeamBoard, ChallStat}
+        components: {NoticeBlock, TeamBoard, ChallStat},
+        methods: {
+            logOut: function () {
+                this.$store.state.ACCESS_TOKEN = "";
+                this.$router.push({ path: "/login" })
+            }
+        },
+        beforeCreate() {
+            if (!this.$store.state.ACCESS_TOKEN) {
+                this.$router.push({ path: "/login" })
+            }
+        }
     }
 </script>
 
@@ -113,5 +124,28 @@
         min-width: 500px;
         height: 750px;
         float: left;
+    }
+    .submit-btn:active{
+        color: white;
+        background: linear-gradient(to bottom right, rgb(174, 186, 248), rgb(202, 218, 248));
+    }
+    .submit-btn:hover {
+        color: white;
+
+    }
+    .submit-btn{
+        position: relative;
+        width: 100px;
+        height: 40px;
+        font-size: 17px;
+        line-height: 40px;
+        border-radius: 50px;
+        text-align: center;
+        text-indent: 0;
+        transition: all 0.2s linear;
+        border: none;
+        background: linear-gradient(to bottom right, rgb(240, 10, 81), rgb(200, 40, 40));
+        float: right;
+        margin-right: 40px;
     }
 </style>

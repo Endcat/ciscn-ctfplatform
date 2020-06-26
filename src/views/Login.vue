@@ -1,17 +1,15 @@
 <template>
-        <login-box></login-box>
+    <login-box></login-box>
 </template>
 
 <script>
-    import loginBox from "../components/loginBox";
-    export default {
-        name: "Login",
-        components: {
-            loginBox
-        }
-    }
+import loginBox from "../components/loginBox";
+export default {
+    name: "Login",
+    components: {
+        loginBox,
+    },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
